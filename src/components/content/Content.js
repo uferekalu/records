@@ -7,7 +7,7 @@ export default function Content(props) {
         <>
             <div className="content">
                 <Header />
-                <MainContent />
+                <MainContent employeesData={props.employeesData} />
             </div>
         </>
     )

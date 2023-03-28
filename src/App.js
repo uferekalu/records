@@ -8,7 +8,7 @@ export default function App(props) {
       <div data-testid="container" className="container">
         <div className="container__content">
           <Sidebar />
-          <Content />
+          <Content employeesData={props.employeesData} />
         </div>
       </div>
     </>

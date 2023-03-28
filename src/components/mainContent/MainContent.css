@@ -1,8 +1,19 @@
 .main-content {
-    display: flex;
-    flex-direction: column;
-    width: 70%;
-    padding: 30px;
-    background: white;
-    margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  background: white;
+  margin-top: 20px;
+}
+.main-content__searchholder {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.main-content__search {
+  background: #ffffff;
+  padding: 9px 16px 10px;
+  border-radius: 5px;
+  border: 1px solid #e7e7e7;
 }

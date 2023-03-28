@@ -38,9 +38,12 @@
   },
   "devDependencies": {
     "@testing-library/cypress": "^9.0.0",
+    "chai": "^4.3.7",
     "cypress": "^12.8.1",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.7",
+    "expect": "^29.5.0",
+    "jest-junit": "^15.0.0",
     "react-test-renderer": "^18.2.0"
   }
 }

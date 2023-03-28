@@ -1,6 +1,22 @@
+import { useEffect, useState } from 'react'
 import './Sidebar.css'
 
 export default function Sidebar(props) {
+    const [isEmployees, setIsEmployees] = useState(false)
+    const [isEditEmployees, setIsEditEmployees] = useState(false)
+
+    const handleIsEmployees = () => {
+        setIsEmployees(true)
+        setIsEditEmployees(false)
+    }
+    const handleIsEditEmployees = () => {
+        setIsEditEmployees(true)
+        setIsEmployees(false)
+    }
+
+    useEffect(() => {
+        isEditEmployees ? setIsEmployees(false) : setIsEmployees(true)
+    }, [setIsEmployees, isEditEmployees])
     return (
         <>
             <div className="sidebar">
@@ -24,7 +40,16 @@ export default function Sidebar(props) {
                         placeholder='Search for an employee'
                     />
                 </div>
-                <div className='employees-holder'>
+                <div
+                    onClick={handleIsEmployees}
+                    style={
+                        isEmployees ? {
+                            background: "#A6A6A6",
+                            width: "80%",
+                            borderRadius: "5px"
+                        } : {
+                        }
+                    } className='employees-holder'>
                     <img
                         // eslint-disable-next-line jsx-a11y/aria-role
                         role="employeeicon"
@@ -34,7 +59,17 @@ export default function Sidebar(props) {
                         Employees
                     </h5>
                 </div>
-                <div className='edit-employees-holder'>
+                <div
+                    style={
+                        isEditEmployees ? {
+                            background: "#A6A6A6",
+                            width: "80%",
+                            borderRadius: "5px"
+                        } : {
+                        }
+                    }
+                    onClick={handleIsEditEmployees}
+                    className='edit-employees-holder'>
                     <img
                         // eslint-disable-next-line jsx-a11y/aria-role
                         role="employee"
