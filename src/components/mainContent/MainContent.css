@@ -1,0 +1,8 @@
+.main-content {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    padding: 30px;
+    background: white;
+    margin-top: 20px;
+}
