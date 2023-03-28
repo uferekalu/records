@@ -1,9 +1,20 @@
 .header{
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     height: 52px;
     box-shadow: 0 4px 8px 0 rgba(0, 0 , 0, 0.1);
     border-bottom: 1px solid rgb(245, 234, 234);
     margin: 0px;
-    padding: 20px 20px 0px 0px;
+    padding: 20px 20px 0px 20px;
+}
+.header .title {
+    color: #00902F;
+    font-weight: 600;
+}
+.btn-admin {
+    background: transparent;
+    border: 1px solid #00902F;
+    padding: 8px;
+    border-radius: 5px;
+    color: #00902F;
 }

@@ -4,7 +4,14 @@ export default function Header(props) {
     return (
         <>
             <div className="header">
-                header
+                <div className='header_tittle'>
+                    <h3 data-testid="recordTitle" className='title'>Employee Records</h3>
+                </div>
+                <div className='header__admin'>
+                    <button data-testid="btnAdmin" className='btn-admin'>
+                        Admin
+                    </button>
+                </div>
             </div>
         </>
     )
