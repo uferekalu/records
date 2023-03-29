@@ -7,7 +7,32 @@ export default function Content(props) {
         <>
             <div className="content">
                 <Header />
-                <MainContent employeesData={props.employeesData} />
+                <MainContent
+                    employeesData={props.employeesData}
+                    isEmployeesDetails={props.isEmployeesDetails}
+                    setIsEmployeeDetails={props.setIsEmployeeDetails}
+                    isModifyEmployees={props.isModifyEmployees}
+                    setIsModifyEmployees={props.setIsModifyEmployees}
+                    isEmployees={props.isEmployees}
+                    setIsEmployees={props.setIsEmployees}
+                    isEditEmployees={props.isEditEmployees}
+                    setIsEditEmployees={props.setIsEditEmployees}
+                    moderatedJoinedDates={props.moderatedJoinedDates}
+                    joinedDate={props.joinedDate}
+                    setJoinedDate={props.setJoinedDate}
+                    roles={props.roles}
+                    setRoles={props.setRoles}
+                    role={props.role}
+                    setRole={props.setRole}
+                    countries={props.countries}
+                    setCountries={props.setCountries}
+                    country={props.country}
+                    setCountry={props.setCountry}
+                    levels={props.levels}
+                    setLevels={props.setLevels}
+                    level={props.level}
+                    setLevel={props.setLevel}
+                />
             </div>
         </>
     )

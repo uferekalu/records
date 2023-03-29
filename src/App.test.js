@@ -23,12 +23,8 @@ test("Initial UI renders correctly", () => {
   expect(filterInput).toHaveValue("")
 })
 
-
-describe('<App />', () => {
-  it('has a container div', () => {
-    render(<App />);
-
-    const el = screen.getByTestId('container')
-    expect(el.className).toBe('container')
-  })
+test("has a container div", () => {
+  renderApp(employeesData)
+  const el = screen.getByTestId("container")
+  expect(el.className).toBe('container')
 })

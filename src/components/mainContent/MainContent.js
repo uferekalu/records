@@ -1,7 +1,25 @@
+import { useEffect } from 'react'
+import { Form } from 'react-bootstrap'
 import './MainContent.css'
 
 export default function MainContent(props) {
-    // console.log("employees data", props.employeesData)
+    const handleEmployeesDetails = () => {
+        props.setIsEmployeeDetails(true)
+        props.setIsModifyEmployees(false)
+        props.setIsEmployees(true)
+        props.setIsEditEmployees(false)
+    }
+
+    const handleModifyEmployees = () => {
+        props.setIsModifyEmployees(true)
+        props.setIsEmployeeDetails(false)
+        props.setIsEmployees(false)
+        props.setIsEditEmployees(true)
+    }
+
+    useEffect(() => {
+        props.isModifyEmployees ? props.setIsEmployeeDetails(false) : props.setIsEmployeeDetails(true)
+    }, [props.isModifyEmployees, props.setIsEmployeeDetails, props])
     return (
         <>
             <div className='main-content'>
@@ -12,6 +30,87 @@ export default function MainContent(props) {
                         type="text"
                         placeholder="search"
                     />
+                </div>
+                <div>
+                    <Form.Label
+                        className={props.isEmployeesDetails ? "isEmployeeDetails" : "notEmployeeDetails"}
+                        onClick={handleEmployeesDetails}
+                    >
+                        EMPLOYEES DETAILS
+                    </Form.Label>
+                    <Form.Label
+                        className={props.isModifyEmployees ? "isModifyEmployees" : "notModifyEmployees"}
+                        onClick={handleModifyEmployees}>
+                        MODIFY EMPLOYEES
+                    </Form.Label>
+                </div>
+                <hr style={{
+                    marginTop: '6.8px'
+                }} />
+                <div className='filtering-holder'>
+                    <div style={{
+                        display: "flex",
+                        gap: '10px'
+                    }}>
+                        <select
+                            className='filterbydate'
+                            onChange={(event) => props.setJoinedDate(event.target.value)}
+                        >
+                            <option value="">Filter by date joined</option>
+                            {props.moderatedJoinedDates.length > 1 ? (
+                                props.moderatedJoinedDates.map((date, idx) => (
+                                    <option key={idx} value={date}>{date}</option>
+                                ))
+                            ) : (
+                                <option value={props.moderatedJoinedDates[0]}>
+                                    {props.moderatedJoinedDates[0]}
+                                </option>
+                            )}
+                        </select>
+                        <select
+                            className='filterbyrole'
+                            onChange={(event) => props.setRole(event.target.value)}
+                        >
+                            <option value="">Filter by role</option>
+                            {props.roles.length > 1 ? (
+                                props.roles.map((role, idx) => (
+                                    <option key={idx} value={role}>{role}</option>
+                                ))
+                            ) : (
+                                <option value={props.roles[0]}>{props.roles[0]}</option>
+                            )}
+
+                        </select>
+                        <select
+                            className='filterbycountry'
+                            onChange={(event) => props.setCountry(event.target.value)}
+                        >
+                            <option value="">Filter by country</option>
+                            {props.countries.length > 1 ? (
+                                props.countries.map((country, idx) => (
+                                    <option key={idx} value={country}>{country}</option>
+                                ))
+                            ) : (
+                                <option value={props.countries[0]}>{props.countries[0]}</option>
+                            )}
+
+                        </select>
+                    </div>
+                    <div
+                        className='sort-holder'>
+                        <Form.Label className='sort-label'>
+                            Sort by
+                        </Form.Label>
+                        <select
+                            className='sortby-level'
+                            onChange={(event) => props.setLevel(event.target.value)}
+                        >
+                            <option value={""}>Level</option>
+                            {props.levels.map((level, idx) => (
+                                <option key={idx} value={level}>{level}</option>
+                            ))}
+                        </select>
+                    </div>
                 </div>
             </div>
         </>

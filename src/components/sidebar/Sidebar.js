@@ -1,22 +1,23 @@
-import { useEffect, useState } from 'react'
+import { useEffect } from 'react'
 import './Sidebar.css'
 
 export default function Sidebar(props) {
-    const [isEmployees, setIsEmployees] = useState(false)
-    const [isEditEmployees, setIsEditEmployees] = useState(false)
-
     const handleIsEmployees = () => {
-        setIsEmployees(true)
-        setIsEditEmployees(false)
+        props.setIsEmployees(true)
+        props.setIsEditEmployees(false)
+        props.setIsEmployeeDetails(true)
+        props.setIsModifyEmployees(false)
     }
     const handleIsEditEmployees = () => {
-        setIsEditEmployees(true)
-        setIsEmployees(false)
+        props.setIsEditEmployees(true)
+        props.setIsEmployees(false)
+        props.setIsEmployeeDetails(false)
+        props.setIsModifyEmployees(true)
     }
 
     useEffect(() => {
-        isEditEmployees ? setIsEmployees(false) : setIsEmployees(true)
-    }, [setIsEmployees, isEditEmployees])
+        props.isEditEmployees ? props.setIsEmployees(false) : props.setIsEmployees(true)
+    }, [props.setIsEmployees, props.isEditEmployees, props])
     return (
         <>
             <div className="sidebar">
@@ -41,9 +42,10 @@ export default function Sidebar(props) {
                     />
                 </div>
                 <div
+                    id="employees"
                     onClick={handleIsEmployees}
                     style={
-                        isEmployees ? {
+                        props.isEmployees ? {
                             background: "#A6A6A6",
                             width: "80%",
                             borderRadius: "5px"
@@ -60,8 +62,9 @@ export default function Sidebar(props) {
                     </h5>
                 </div>
                 <div
+                    id="edit-employees"
                     style={
-                        isEditEmployees ? {
+                        props.isEditEmployees ? {
                             background: "#A6A6A6",
                             width: "80%",
                             borderRadius: "5px"
