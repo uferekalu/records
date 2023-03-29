@@ -1,8 +1,15 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { Form } from 'react-bootstrap'
+import EmployeesDetailsComp from '../employeesDetails/EmployeesDetailsComp'
+import ModifyEmployeesComp from '../modifyEmployees/modifyEmployeesComp'
+import CustomPagination from '../pagination/customPagination'
 import './MainContent.css'
 
 export default function MainContent(props) {
+    const [pageNumbers, setPageNumbers] = useState([])
+    const [activePagenumber, setActivePagenumber] = useState(1)
+    const [pageNumber, setPageNumber] = useState(1)
+
     const handleEmployeesDetails = () => {
         props.setIsEmployeeDetails(true)
         props.setIsModifyEmployees(false)
@@ -141,6 +148,36 @@ export default function MainContent(props) {
                             ))}
                         </select>
                     </div>
+                </div>
+                {props.isEmployeesDetails && (
+                    <EmployeesDetailsComp
+                        employeesData={props.employeesData}
+                        pageNumber={pageNumber}
+                        joinedDate={props.joinedDate}
+                        role={props.role}
+                        country={props.country}
+                        level={props.level}
+                    />
+                )}
+                {props.isModifyEmployees && (
+                    <ModifyEmployeesComp
+                        employeesData={props.employeesData}
+                        pageNumber={pageNumber}
+                        joinedDate={props.joinedDate}
+                        role={props.role}
+                        country={props.country}
+                        level={props.level}
+                    />
+                )}
+                <div className='paginagion-holder'>
+                    <CustomPagination
+                        data={props.employeesData}
+                        setPageNumbers={setPageNumbers}
+                        activePagenumber={activePagenumber}
+                        pageNumbers={pageNumbers}
+                        setPageNumber={setPageNumber}
+                        setActivePagenumber={setActivePagenumber}
+                    />
                 </div>
             </div>
         </>

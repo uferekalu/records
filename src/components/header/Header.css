@@ -1,11 +1,14 @@
 .header{
     display: flex;
     justify-content: space-between;
-    height: 52px;
+    height: 62px;
     box-shadow: 0 4px 8px 0 rgba(0, 0 , 0, 0.1);
     border-bottom: 1px solid rgb(245, 234, 234);
     margin: 0px;
-    padding: 20px 20px 0px 20px;
+    padding: 20px;
+}
+.header__admin {
+    margin-top: -5px;
 }
 .header .title {
     color: #00902F;

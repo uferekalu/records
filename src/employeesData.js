@@ -8,7 +8,8 @@ export const employeesData = [
         country: "USA",
         email: "johndoe@gmail.com",
         address: 'Greenland Estate',
-        department: 'Engineering'
+        department: 'Engineering',
+        actions: ["/assets/images/btneye.png", "/assets/images/btnedit.png", "/assets/images/loadellipses.png"]
     },
     {
         id: 1404969,
@@ -19,7 +20,8 @@ export const employeesData = [
         country: "USA",
         email: "johndoe@gmail.com",
         address: 'Greenland Estate',
-        department: 'Engineering'
+        department: 'Engineering',
+        actions: ["/assets/images/btneye.png", "/assets/images/btnedit.png", "/assets/images/loadellipses.png"]
     },
     {
         id: 1404970,
@@ -30,7 +32,8 @@ export const employeesData = [
         country: "USA",
         email: "johndoe@gmail.com",
         address: 'Greenland Estate',
-        department: 'Engineering'
+        department: 'Engineering',
+        actions: ["/assets/images/btneye.png", "/assets/images/btnedit.png", "/assets/images/loadellipses.png"]
     },
     {
         id: 1404971,
@@ -41,7 +44,8 @@ export const employeesData = [
         country: "USA",
         email: "johndoe@gmail.com",
         address: 'Greenland Estate',
-        department: 'Engineering'
+        department: 'Engineering',
+        actions: ["/assets/images/btneye.png", "/assets/images/btnedit.png", "/assets/images/loadellipses.png"]
     },
     {
         id: 1404972,
@@ -52,7 +56,8 @@ export const employeesData = [
         country: "USA",
         email: "johndoe@gmail.com",
         address: 'Greenland Estate',
-        department: 'Engineering'
+        department: 'Engineering',
+        actions: ["/assets/images/btneye.png", "/assets/images/btnedit.png", "/assets/images/loadellipses.png"]
     },
     {
         id: 1404973,
@@ -63,7 +68,8 @@ export const employeesData = [
         country: "USA",
         email: "johndoe@gmail.com",
         address: 'Greenland Estate',
-        department: 'Engineering'
+        department: 'Engineering',
+        actions: ["/assets/images/btneye.png", "/assets/images/btnedit.png", "/assets/images/loadellipses.png"]
     },
     {
         id: 1404974,
@@ -74,7 +80,8 @@ export const employeesData = [
         country: "USA",
         email: "johndoe@gmail.com",
         address: 'Greenland Estate',
-        department: 'Engineering'
+        department: 'Engineering',
+        actions: ["/assets/images/btneye.png", "/assets/images/btnedit.png", "/assets/images/loadellipses.png"]
     },
     {
         id: 1404975,
@@ -85,7 +92,8 @@ export const employeesData = [
         country: "USA",
         email: "johndoe@gmail.com",
         address: 'Greenland Estate',
-        department: 'Engineering'
+        department: 'Engineering',
+        actions: ["/assets/images/btneye.png", "/assets/images/btnedit.png", "/assets/images/loadellipses.png"]
     },
     {
         id: 1404976,
@@ -96,7 +104,8 @@ export const employeesData = [
         country: "USA",
         email: "johndoe@gmail.com",
         address: 'Greenland Estate',
-        department: 'Engineering'
+        department: 'Engineering',
+        actions: ["/assets/images/btneye.png", "/assets/images/btnedit.png", "/assets/images/loadellipses.png"]
     },
     {
         id: 1404977,
@@ -107,7 +116,8 @@ export const employeesData = [
         country: "USA",
         email: "johndoe@gmail.com",
         address: 'Greenland Estate',
-        department: 'Engineering'
+        department: 'Engineering',
+        actions: ["/assets/images/btneye.png", "/assets/images/btnedit.png", "/assets/images/loadellipses.png"]
     },
     {
         id: 1404978,
@@ -118,7 +128,8 @@ export const employeesData = [
         country: "USA",
         email: "johndoe@gmail.com",
         address: 'Greenland Estate',
-        department: 'Engineering'
+        department: 'Engineering',
+        actions: ["/assets/images/btneye.png", "/assets/images/btnedit.png", "/assets/images/loadellipses.png"]
     },
     {
         id: 1404979,
@@ -129,7 +140,8 @@ export const employeesData = [
         country: "USA",
         email: "johndoe@gmail.com",
         address: 'Greenland Estate',
-        department: 'Engineering'
+        department: 'Engineering',
+        actions: ["/assets/images/btneye.png", "/assets/images/btnedit.png", "/assets/images/loadellipses.png"]
     },
     {
         id: 1404980,
@@ -140,7 +152,8 @@ export const employeesData = [
         country: "Nigeria",
         email: "johndoe@gmail.com",
         address: 'Greenland Estate',
-        department: 'Engineering'
+        department: 'Engineering',
+        actions: ["/assets/images/btneye.png", "/assets/images/btnedit.png", "/assets/images/loadellipses.png"]
     },
     {
         id: 1404981,
@@ -151,7 +164,8 @@ export const employeesData = [
         country: "Nigeria",
         email: "johndoe@gmail.com",
         address: 'Greenland Estate',
-        department: 'Engineering'
+        department: 'Engineering',
+        actions: ["/assets/images/btneye.png", "/assets/images/btnedit.png", "/assets/images/loadellipses.png"]
     },
     {
         id: 1404982,
@@ -162,7 +176,8 @@ export const employeesData = [
         country: "Nigeria",
         email: "johndoe@gmail.com",
         address: 'Greenland Estate',
-        department: 'Engineering'
+        department: 'Engineering',
+        actions: ["/assets/images/btneye.png", "/assets/images/btnedit.png", "/assets/images/loadellipses.png"]
     },
     {
         id: 1404983,
@@ -173,7 +188,8 @@ export const employeesData = [
         country: "Nigeria",
         email: "johndoe@gmail.com",
         address: 'Greenland Estate',
-        department: 'Engineering'
+        department: 'Engineering',
+        actions: ["/assets/images/btneye.png", "/assets/images/btnedit.png", "/assets/images/loadellipses.png"]
     },
     {
         id: 1404984,
@@ -184,7 +200,8 @@ export const employeesData = [
         country: "Nigeria",
         email: "johndoe@gmail.com",
         address: 'Greenland Estate',
-        department: 'Engineering'
+        department: 'Engineering',
+        actions: ["/assets/images/btneye.png", "/assets/images/btnedit.png", "/assets/images/loadellipses.png"]
     },
     {
         id: 1404985,
@@ -195,7 +212,8 @@ export const employeesData = [
         country: "Nigeria",
         email: "johndoe@gmail.com",
         address: 'Greenland Estate',
-        department: 'Engineering'
+        department: 'Engineering',
+        actions: ["/assets/images/btneye.png", "/assets/images/btnedit.png", "/assets/images/loadellipses.png"]
     },
     {
         id: 1404986,
@@ -206,7 +224,8 @@ export const employeesData = [
         country: "Nigeria",
         email: "johndoe@gmail.com",
         address: 'Greenland Estate',
-        department: 'Engineering'
+        department: 'Engineering',
+        actions: ["/assets/images/btneye.png", "/assets/images/btnedit.png", "/assets/images/loadellipses.png"]
     },
     {
         id: 1404987,
@@ -217,7 +236,8 @@ export const employeesData = [
         country: "Nigeria",
         email: "johndoe@gmail.com",
         address: 'Greenland Estate',
-        department: 'Engineering'
+        department: 'Engineering',
+        actions: ["/assets/images/btneye.png", "/assets/images/btnedit.png", "/assets/images/loadellipses.png"]
     },
     {
         id: 1404988,
@@ -228,7 +248,8 @@ export const employeesData = [
         country: "Nigeria",
         email: "johndoe@gmail.com",
         address: 'Greenland Estate',
-        department: 'Engineering'
+        department: 'Engineering',
+        actions: ["/assets/images/btneye.png", "/assets/images/btnedit.png", "/assets/images/loadellipses.png"]
     },
     {
         id: 1404989,
@@ -239,7 +260,8 @@ export const employeesData = [
         country: "Nigeria",
         email: "johndoe@gmail.com",
         address: 'Greenland Estate',
-        department: 'Engineering'
+        department: 'Engineering',
+        actions: ["/assets/images/btneye.png", "/assets/images/btnedit.png", "/assets/images/loadellipses.png"]
     },
     {
         id: 1404990,
@@ -250,7 +272,8 @@ export const employeesData = [
         country: "Nigeria",
         email: "johndoe@gmail.com",
         address: 'Greenland Estate',
-        department: 'Engineering'
+        department: 'Engineering',
+        actions: ["/assets/images/btneye.png", "/assets/images/btnedit.png", "/assets/images/loadellipses.png"]
     },
     {
         id: 1404991,
@@ -261,7 +284,8 @@ export const employeesData = [
         country: "Nigeria",
         email: "johndoe@gmail.com",
         address: 'Greenland Estate',
-        department: 'Engineering'
+        department: 'Engineering',
+        actions: ["/assets/images/btneye.png", "/assets/images/btnedit.png", "/assets/images/loadellipses.png"]
     },
     {
         id: 1404992,
@@ -272,7 +296,8 @@ export const employeesData = [
         country: "Nigeria",
         email: "johndoe@gmail.com",
         address: 'Greenland Estate',
-        department: 'Engineering'
+        department: 'Engineering',
+        actions: ["/assets/images/btneye.png", "/assets/images/btnedit.png", "/assets/images/loadellipses.png"]
     },
     {
         id: 1404993,
@@ -283,7 +308,8 @@ export const employeesData = [
         country: "Nigeria",
         email: "johndoe@gmail.com",
         address: 'Greenland Estate',
-        department: 'Engineering'
+        department: 'Engineering',
+        actions: ["/assets/images/btneye.png", "/assets/images/btnedit.png", "/assets/images/loadellipses.png"]
     },
     {
         id: 1404994,
@@ -294,7 +320,8 @@ export const employeesData = [
         country: "Nigeria",
         email: "johndoe@gmail.com",
         address: 'Greenland Estate',
-        department: 'Engineering'
+        department: 'Engineering',
+        actions: ["/assets/images/btneye.png", "/assets/images/btnedit.png", "/assets/images/loadellipses.png"]
     },
     {
         id: 1404995,
@@ -305,7 +332,8 @@ export const employeesData = [
         country: "Nigeria",
         email: "johndoe@gmail.com",
         address: 'Greenland Estate',
-        department: 'Engineering'
+        department: 'Engineering',
+        actions: ["/assets/images/btneye.png", "/assets/images/btnedit.png", "/assets/images/loadellipses.png"]
     },
     {
         id: 1404996,
@@ -316,7 +344,8 @@ export const employeesData = [
         country: "India",
         email: "johndoe@gmail.com",
         address: 'Greenland Estate',
-        department: 'Engineering'
+        department: 'Engineering',
+        actions: ["/assets/images/btneye.png", "/assets/images/btnedit.png", "/assets/images/loadellipses.png"]
     },
     {
         id: 1404997,
@@ -327,7 +356,8 @@ export const employeesData = [
         country: "India",
         email: "johndoe@gmail.com",
         address: 'Greenland Estate',
-        department: 'Engineering'
+        department: 'Engineering',
+        actions: ["/assets/images/btneye.png", "/assets/images/btnedit.png", "/assets/images/loadellipses.png"]
     },
     {
         id: 1404998,
@@ -338,7 +368,8 @@ export const employeesData = [
         country: "India",
         email: "johndoe@gmail.com",
         address: 'Greenland Estate',
-        department: 'Engineering'
+        department: 'Engineering',
+        actions: ["/assets/images/btneye.png", "/assets/images/btnedit.png", "/assets/images/loadellipses.png"]
     },
     {
         id: 1404999,
@@ -349,7 +380,8 @@ export const employeesData = [
         country: "India",
         email: "johndoe@gmail.com",
         address: 'Greenland Estate',
-        department: 'Engineering'
+        department: 'Engineering',
+        actions: ["/assets/images/btneye.png", "/assets/images/btnedit.png", "/assets/images/loadellipses.png"]
     },
     {
         id: 14049100,
@@ -360,7 +392,8 @@ export const employeesData = [
         country: "India",
         email: "johndoe@gmail.com",
         address: 'Greenland Estate',
-        department: 'Engineering'
+        department: 'Engineering',
+        actions: ["/assets/images/btneye.png", "/assets/images/btnedit.png", "/assets/images/loadellipses.png"]
     },
     {
         id: 14049101,
@@ -371,7 +404,8 @@ export const employeesData = [
         country: "India",
         email: "johndoe@gmail.com",
         address: 'Greenland Estate',
-        department: 'Engineering'
+        department: 'Engineering',
+        actions: ["/assets/images/btneye.png", "/assets/images/btnedit.png", "/assets/images/loadellipses.png"]
     },
     {
         id: 14049102,
@@ -382,7 +416,8 @@ export const employeesData = [
         country: "India",
         email: "johndoe@gmail.com",
         address: 'Greenland Estate',
-        department: 'Engineering'
+        department: 'Engineering',
+        actions: ["/assets/images/btneye.png", "/assets/images/btnedit.png", "/assets/images/loadellipses.png"]
     },
     {
         id: 14049103,
@@ -393,7 +428,8 @@ export const employeesData = [
         country: "India",
         email: "johndoe@gmail.com",
         address: 'Greenland Estate',
-        department: 'Engineering'
+        department: 'Engineering',
+        actions: ["/assets/images/btneye.png", "/assets/images/btnedit.png", "/assets/images/loadellipses.png"]
     },
     {
         id: 14049104,
@@ -404,7 +440,8 @@ export const employeesData = [
         country: "India",
         email: "johndoe@gmail.com",
         address: 'Greenland Estate',
-        department: 'Engineering'
+        department: 'Engineering',
+        actions: ["/assets/images/btneye.png", "/assets/images/btnedit.png", "/assets/images/loadellipses.png"]
     },
     {
         id: 14049105,
@@ -415,7 +452,8 @@ export const employeesData = [
         country: "India",
         email: "johndoe@gmail.com",
         address: 'Greenland Estate',
-        department: 'Engineering'
+        department: 'Engineering',
+        actions: ["/assets/images/btneye.png", "/assets/images/btnedit.png", "/assets/images/loadellipses.png"]
     },
     {
         id: 14049106,
@@ -426,7 +464,8 @@ export const employeesData = [
         country: "India",
         email: "johndoe@gmail.com",
         address: 'Greenland Estate',
-        department: 'Engineering'
+        department: 'Engineering',
+        actions: ["/assets/images/btneye.png", "/assets/images/btnedit.png", "/assets/images/loadellipses.png"]
     },
     {
         id: 14049107,
@@ -437,7 +476,8 @@ export const employeesData = [
         country: "India",
         email: "johndoe@gmail.com",
         address: 'Greenland Estate',
-        department: 'Engineering'
+        department: 'Engineering',
+        actions: ["/assets/images/btneye.png", "/assets/images/btnedit.png", "/assets/images/loadellipses.png"]
     },
     {
         id: 14049108,
@@ -448,7 +488,8 @@ export const employeesData = [
         country: "India",
         email: "johndoe@gmail.com",
         address: 'Greenland Estate',
-        department: 'Engineering'
+        department: 'Engineering',
+        actions: ["/assets/images/btneye.png", "/assets/images/btnedit.png", "/assets/images/loadellipses.png"]
     },
     {
         id: 14049109,
@@ -459,7 +500,8 @@ export const employeesData = [
         country: "India",
         email: "johndoe@gmail.com",
         address: 'Greenland Estate',
-        department: 'Engineering'
+        department: 'Engineering',
+        actions: ["/assets/images/btneye.png", "/assets/images/btnedit.png", "/assets/images/loadellipses.png"]
     },
     {
         id: 14049110,
@@ -470,7 +512,8 @@ export const employeesData = [
         country: "India",
         email: "johndoe@gmail.com",
         address: 'Greenland Estate',
-        department: 'Engineering'
+        department: 'Engineering',
+        actions: ["/assets/images/btneye.png", "/assets/images/btnedit.png", "/assets/images/loadellipses.png"]
     },
     {
         id: 14049111,
@@ -481,7 +524,8 @@ export const employeesData = [
         country: "Nigeria",
         email: "johndoe@gmail.com",
         address: 'Greenland Estate',
-        department: 'Engineering'
+        department: 'Engineering',
+        actions: ["/assets/images/btneye.png", "/assets/images/btnedit.png", "/assets/images/loadellipses.png"]
     },
     {
         id: 14049112,
@@ -492,7 +536,8 @@ export const employeesData = [
         country: "Nigeria",
         email: "johndoe@gmail.com",
         address: 'Greenland Estate',
-        department: 'Engineering'
+        department: 'Engineering',
+        actions: ["/assets/images/btneye.png", "/assets/images/btnedit.png", "/assets/images/loadellipses.png"]
     },
     {
         id: 14049113,
@@ -503,7 +548,8 @@ export const employeesData = [
         country: "Nigeria",
         email: "johndoe@gmail.com",
         address: 'Greenland Estate',
-        department: 'Engineering'
+        department: 'Engineering',
+        actions: ["/assets/images/btneye.png", "/assets/images/btnedit.png", "/assets/images/loadellipses.png"]
     },
     {
         id: 14049114,
@@ -514,7 +560,8 @@ export const employeesData = [
         country: "Nigeria",
         email: "johndoe@gmail.com",
         address: 'Greenland Estate',
-        department: 'Engineering'
+        department: 'Engineering',
+        actions: ["/assets/images/btneye.png", "/assets/images/btnedit.png", "/assets/images/loadellipses.png"]
     },
     {
         id: 14049115,
@@ -525,7 +572,8 @@ export const employeesData = [
         country: "Nigeria",
         email: "johndoe@gmail.com",
         address: 'Greenland Estate',
-        department: 'Engineering'
+        department: 'Engineering',
+        actions: ["/assets/images/btneye.png", "/assets/images/btnedit.png", "/assets/images/loadellipses.png"]
     },
     {
         id: 14049116,
@@ -536,7 +584,8 @@ export const employeesData = [
         country: "Nigeria",
         email: "johndoe@gmail.com",
         address: 'Greenland Estate',
-        department: 'Engineering'
+        department: 'Engineering',
+        actions: ["/assets/images/btneye.png", "/assets/images/btnedit.png", "/assets/images/loadellipses.png"]
     },
     {
         id: 14049117,
@@ -547,7 +596,8 @@ export const employeesData = [
         country: "Nigeria",
         email: "johndoe@gmail.com",
         address: 'Greenland Estate',
-        department: 'Engineering'
+        department: 'Engineering',
+        actions: ["/assets/images/btneye.png", "/assets/images/btnedit.png", "/assets/images/loadellipses.png"]
     },
     {
         id: 14049118,
@@ -558,7 +608,8 @@ export const employeesData = [
         country: "Nigeria",
         email: "johndoe@gmail.com",
         address: 'Greenland Estate',
-        department: 'Engineering'
+        department: 'Engineering',
+        actions: ["/assets/images/btneye.png", "/assets/images/btnedit.png", "/assets/images/loadellipses.png"]
     },
     {
         id: 14049119,
@@ -569,7 +620,8 @@ export const employeesData = [
         country: "Nigeria",
         email: "johndoe@gmail.com",
         address: 'Greenland Estate',
-        department: 'Engineering'
+        department: 'Engineering',
+        actions: ["/assets/images/btneye.png", "/assets/images/btnedit.png", "/assets/images/loadellipses.png"]
     },
     {
         id: 14049120,
@@ -580,7 +632,8 @@ export const employeesData = [
         country: "Nigeria",
         email: "johndoe@gmail.com",
         address: 'Greenland Estate',
-        department: 'Engineering'
+        department: 'Engineering',
+        actions: ["/assets/images/btneye.png", "/assets/images/btnedit.png", "/assets/images/loadellipses.png"]
     },
     {
         id: 14049121,
@@ -591,7 +644,8 @@ export const employeesData = [
         country: "Nigeria",
         email: "johndoe@gmail.com",
         address: 'Greenland Estate',
-        department: 'Engineering'
+        department: 'Engineering',
+        actions: ["/assets/images/btneye.png", "/assets/images/btnedit.png", "/assets/images/loadellipses.png"]
     },
     {
         id: 14049122,
@@ -602,7 +656,8 @@ export const employeesData = [
         country: "Nigeria",
         email: "johndoe@gmail.com",
         address: 'Greenland Estate',
-        department: 'Engineering'
+        department: 'Engineering',
+        actions: ["/assets/images/btneye.png", "/assets/images/btnedit.png", "/assets/images/loadellipses.png"]
     },
     {
         id: 14049123,
@@ -613,7 +668,8 @@ export const employeesData = [
         country: "Nigeria",
         email: "johndoe@gmail.com",
         address: 'Greenland Estate',
-        department: 'Engineering'
+        department: 'Engineering',
+        actions: ["/assets/images/btneye.png", "/assets/images/btnedit.png", "/assets/images/loadellipses.png"]
     },
     {
         id: 14049124,
@@ -624,7 +680,8 @@ export const employeesData = [
         country: "Nigeria",
         email: "johndoe@gmail.com",
         address: 'Greenland Estate',
-        department: 'Engineering'
+        department: 'Engineering',
+        actions: ["/assets/images/btneye.png", "/assets/images/btnedit.png", "/assets/images/loadellipses.png"]
     },
     {
         id: 14049125,
@@ -635,7 +692,8 @@ export const employeesData = [
         country: "Nigeria",
         email: "johndoe@gmail.com",
         address: 'Greenland Estate',
-        department: 'Engineering'
+        department: 'Engineering',
+        actions: ["/assets/images/btneye.png", "/assets/images/btnedit.png", "/assets/images/loadellipses.png"]
     },
     {
         id: 14049126,
@@ -646,7 +704,8 @@ export const employeesData = [
         country: "Nigeria",
         email: "johndoe@gmail.com",
         address: 'Greenland Estate',
-        department: 'Engineering'
+        department: 'Engineering',
+        actions: ["/assets/images/btneye.png", "/assets/images/btnedit.png", "/assets/images/loadellipses.png"]
     },
     {
         id: 14049127,
@@ -657,7 +716,8 @@ export const employeesData = [
         country: "Nigeria",
         email: "johndoe@gmail.com",
         address: 'Greenland Estate',
-        department: 'Engineering'
+        department: 'Engineering',
+        actions: ["/assets/images/btneye.png", "/assets/images/btnedit.png", "/assets/images/loadellipses.png"]
     },
     {
         id: 14049128,
@@ -668,7 +728,8 @@ export const employeesData = [
         country: "Nigeria",
         email: "johndoe@gmail.com",
         address: 'Greenland Estate',
-        department: 'Engineering'
+        department: 'Engineering',
+        actions: ["/assets/images/btneye.png", "/assets/images/btnedit.png", "/assets/images/loadellipses.png"]
     },
     {
         id: 14049129,
@@ -679,7 +740,8 @@ export const employeesData = [
         country: "Austrialia",
         email: "johndoe@gmail.com",
         address: 'Greenland Estate',
-        department: 'Engineering'
+        department: 'Engineering',
+        actions: ["/assets/images/btneye.png", "/assets/images/btnedit.png", "/assets/images/loadellipses.png"]
     },
     {
         id: 14049130,
@@ -690,7 +752,8 @@ export const employeesData = [
         country: "Austrialia",
         email: "johndoe@gmail.com",
         address: 'Greenland Estate',
-        department: 'Engineering'
+        department: 'Engineering',
+        actions: ["/assets/images/btneye.png", "/assets/images/btnedit.png", "/assets/images/loadellipses.png"]
     },
     {
         id: 14049131,
@@ -701,7 +764,8 @@ export const employeesData = [
         country: "Austrialia",
         email: "johndoe@gmail.com",
         address: 'Greenland Estate',
-        department: 'Engineering'
+        department: 'Engineering',
+        actions: ["/assets/images/btneye.png", "/assets/images/btnedit.png", "/assets/images/loadellipses.png"]
     },
     {
         id: 14049132,
@@ -712,7 +776,8 @@ export const employeesData = [
         country: "Austrialia",
         email: "johndoe@gmail.com",
         address: 'Greenland Estate',
-        department: 'Engineering'
+        department: 'Engineering',
+        actions: ["/assets/images/btneye.png", "/assets/images/btnedit.png", "/assets/images/loadellipses.png"]
     },
     {
         id: 14049133,
@@ -723,7 +788,8 @@ export const employeesData = [
         country: "Austrialia",
         email: "johndoe@gmail.com",
         address: 'Greenland Estate',
-        department: 'Engineering'
+        department: 'Engineering',
+        actions: ["/assets/images/btneye.png", "/assets/images/btnedit.png", "/assets/images/loadellipses.png"]
     },
     {
         id: 14049134,
@@ -734,7 +800,8 @@ export const employeesData = [
         country: "Austrialia",
         email: "johndoe@gmail.com",
         address: 'Greenland Estate',
-        department: 'Engineering'
+        department: 'Engineering',
+        actions: ["/assets/images/btneye.png", "/assets/images/btnedit.png", "/assets/images/loadellipses.png"]
     },
     {
         id: 14049135,
@@ -745,7 +812,8 @@ export const employeesData = [
         country: "Austrialia",
         email: "johndoe@gmail.com",
         address: 'Greenland Estate',
-        department: 'Engineering'
+        department: 'Engineering',
+        actions: ["/assets/images/btneye.png", "/assets/images/btnedit.png", "/assets/images/loadellipses.png"]
     },
     {
         id: 14049136,
@@ -756,7 +824,8 @@ export const employeesData = [
         country: "Austrialia",
         email: "johndoe@gmail.com",
         address: 'Greenland Estate',
-        department: 'Engineering'
+        department: 'Engineering',
+        actions: ["/assets/images/btneye.png", "/assets/images/btnedit.png", "/assets/images/loadellipses.png"]
     },
     {
         id: 14049137,
@@ -767,7 +836,8 @@ export const employeesData = [
         country: "Austrialia",
         email: "johndoe@gmail.com",
         address: 'Greenland Estate',
-        department: 'Engineering'
+        department: 'Engineering',
+        actions: ["/assets/images/btneye.png", "/assets/images/btnedit.png", "/assets/images/loadellipses.png"]
     },
     {
         id: 14049138,
@@ -778,7 +848,8 @@ export const employeesData = [
         country: "Austrialia",
         email: "johndoe@gmail.com",
         address: 'Greenland Estate',
-        department: 'Engineering'
+        department: 'Engineering',
+        actions: ["/assets/images/btneye.png", "/assets/images/btnedit.png", "/assets/images/loadellipses.png"]
     },
     {
         id: 14049139,
@@ -789,7 +860,8 @@ export const employeesData = [
         country: "Austrialia",
         email: "johndoe@gmail.com",
         address: 'Greenland Estate',
-        department: 'Engineering'
+        department: 'Engineering',
+        actions: ["/assets/images/btneye.png", "/assets/images/btnedit.png", "/assets/images/loadellipses.png"]
     },
     {
         id: 14049140,
@@ -800,7 +872,8 @@ export const employeesData = [
         country: "Austrialia",
         email: "johndoe@gmail.com",
         address: 'Greenland Estate',
-        department: 'Engineering'
+        department: 'Engineering',
+        actions: ["/assets/images/btneye.png", "/assets/images/btnedit.png", "/assets/images/loadellipses.png"]
     },
     {
         id: 14049141,
@@ -811,7 +884,8 @@ export const employeesData = [
         country: "Austrialia",
         email: "johndoe@gmail.com",
         address: 'Greenland Estate',
-        department: 'Engineering'
+        department: 'Engineering',
+        actions: ["/assets/images/btneye.png", "/assets/images/btnedit.png", "/assets/images/loadellipses.png"]
     },
     {
         id: 14049142,
@@ -822,7 +896,8 @@ export const employeesData = [
         country: "Austrialia",
         email: "johndoe@gmail.com",
         address: 'Greenland Estate',
-        department: 'Engineering'
+        department: 'Engineering',
+        actions: ["/assets/images/btneye.png", "/assets/images/btnedit.png", "/assets/images/loadellipses.png"]
     },
     {
         id: 1404968,
@@ -833,7 +908,8 @@ export const employeesData = [
         country: "Austrialia",
         email: "johndoe@gmail.com",
         address: 'Greenland Estate',
-        department: 'Engineering'
+        department: 'Engineering',
+        actions: ["/assets/images/btneye.png", "/assets/images/btnedit.png", "/assets/images/loadellipses.png"]
     },
     {
         id: 14049143,
@@ -844,7 +920,8 @@ export const employeesData = [
         country: "Austrialia",
         email: "johndoe@gmail.com",
         address: 'Greenland Estate',
-        department: 'Engineering'
+        department: 'Engineering',
+        actions: ["/assets/images/btneye.png", "/assets/images/btnedit.png", "/assets/images/loadellipses.png"]
     },
     {
         id: 14049144,
@@ -855,7 +932,8 @@ export const employeesData = [
         country: "Nigeria",
         email: "johndoe@gmail.com",
         address: 'Greenland Estate',
-        department: 'Engineering'
+        department: 'Engineering',
+        actions: ["/assets/images/btneye.png", "/assets/images/btnedit.png", "/assets/images/loadellipses.png"]
     },
     {
         id: 14049145,
@@ -866,7 +944,8 @@ export const employeesData = [
         country: "Nigeria",
         email: "johndoe@gmail.com",
         address: 'Greenland Estate',
-        department: 'Engineering'
+        department: 'Engineering',
+        actions: ["/assets/images/btneye.png", "/assets/images/btnedit.png", "/assets/images/loadellipses.png"]
     },
     {
         id: 14049146,
@@ -877,7 +956,8 @@ export const employeesData = [
         country: "Nigeria",
         email: "johndoe@gmail.com",
         address: 'Greenland Estate',
-        department: 'Engineering'
+        department: 'Engineering',
+        actions: ["/assets/images/btneye.png", "/assets/images/btnedit.png", "/assets/images/loadellipses.png"]
     },
     {
         id: 14049147,
@@ -888,7 +968,8 @@ export const employeesData = [
         country: "Nigeria",
         email: "johndoe@gmail.com",
         address: 'Greenland Estate',
-        department: 'Engineering'
+        department: 'Engineering',
+        actions: ["/assets/images/btneye.png", "/assets/images/btnedit.png", "/assets/images/loadellipses.png"]
     },
     {
         id: 14049148,
@@ -899,7 +980,8 @@ export const employeesData = [
         country: "Nigeria",
         email: "johndoe@gmail.com",
         address: 'Greenland Estate',
-        department: 'Engineering'
+        department: 'Engineering',
+        actions: ["/assets/images/btneye.png", "/assets/images/btnedit.png", "/assets/images/loadellipses.png"]
     },
     {
         id: 14049149,
@@ -910,7 +992,8 @@ export const employeesData = [
         country: "Nigeria",
         email: "johndoe@gmail.com",
         address: 'Greenland Estate',
-        department: 'Engineering'
+        department: 'Engineering',
+        actions: ["/assets/images/btneye.png", "/assets/images/btnedit.png", "/assets/images/loadellipses.png"]
     },
     {
         id: 14049150,
@@ -921,7 +1004,8 @@ export const employeesData = [
         country: "Nigeria",
         email: "johndoe@gmail.com",
         address: 'Greenland Estate',
-        department: 'Engineering'
+        department: 'Engineering',
+        actions: ["/assets/images/btneye.png", "/assets/images/btnedit.png", "/assets/images/loadellipses.png"]
     },
     {
         id: 14049151,
@@ -932,7 +1016,8 @@ export const employeesData = [
         country: "Nigeria",
         email: "johndoe@gmail.com",
         address: 'Greenland Estate',
-        department: 'Engineering'
+        department: 'Engineering',
+        actions: ["/assets/images/btneye.png", "/assets/images/btnedit.png", "/assets/images/loadellipses.png"]
     },
     {
         id: 14049152,
@@ -943,7 +1028,8 @@ export const employeesData = [
         country: "Nigeria",
         email: "johndoe@gmail.com",
         address: 'Greenland Estate',
-        department: 'Engineering'
+        department: 'Engineering',
+        actions: ["/assets/images/btneye.png", "/assets/images/btnedit.png", "/assets/images/loadellipses.png"]
     },
     {
         id: 14049153,
@@ -954,7 +1040,8 @@ export const employeesData = [
         country: "Nigeria",
         email: "johndoe@gmail.com",
         address: 'Greenland Estate',
-        department: 'Engineering'
+        department: 'Engineering',
+        actions: ["/assets/images/btneye.png", "/assets/images/btnedit.png", "/assets/images/loadellipses.png"]
     },
     {
         id: 14049154,
@@ -965,7 +1052,8 @@ export const employeesData = [
         country: "Nigeria",
         email: "johndoe@gmail.com",
         address: 'Greenland Estate',
-        department: 'Engineering'
+        department: 'Engineering',
+        actions: ["/assets/images/btneye.png", "/assets/images/btnedit.png", "/assets/images/loadellipses.png"]
     },
     {
         id: 14049155,
@@ -976,7 +1064,8 @@ export const employeesData = [
         country: "Nigeria",
         email: "johndoe@gmail.com",
         address: 'Greenland Estate',
-        department: 'Engineering'
+        department: 'Engineering',
+        actions: ["/assets/images/btneye.png", "/assets/images/btnedit.png", "/assets/images/loadellipses.png"]
     },
     {
         id: 14049156,
@@ -987,7 +1076,8 @@ export const employeesData = [
         country: "Nigeria",
         email: "johndoe@gmail.com",
         address: 'Greenland Estate',
-        department: 'Engineering'
+        department: 'Engineering',
+        actions: ["/assets/images/btneye.png", "/assets/images/btnedit.png", "/assets/images/loadellipses.png"]
     },
     {
         id: 14049157,
@@ -998,6 +1088,7 @@ export const employeesData = [
         country: "Nigeria",
         email: "johndoe@gmail.com",
         address: 'Greenland Estate',
-        department: 'Engineering'
+        department: 'Engineering',
+        actions: ["/assets/images/btneye.png", "/assets/images/btnedit.png", "/assets/images/loadellipses.png"]
     },
 ]

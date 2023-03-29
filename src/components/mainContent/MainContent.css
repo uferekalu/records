@@ -54,7 +54,7 @@
   border: 1px solid #e7e7e7;
 }
 .filterbyrole {
-  width: 120px;
+  width: 210px;
   padding: 8px;
   border: 1px solid #e7e7e7;
 }
@@ -71,4 +71,9 @@
   width: 130px;
   padding: 8px;
   border: 1px solid #e7e7e7;
+}
+.paginagion-holder {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
 }

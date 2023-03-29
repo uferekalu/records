@@ -5,7 +5,7 @@ export default function Header(props) {
         <>
             <div className="header">
                 <div className='header_tittle'>
-                    <h3 data-testid="recordTitle" className='title'>Employee Records</h3>
+                    <h3 data-testid="recordTitle" className='title'>Employees Record</h3>
                 </div>
                 <div className='header__admin'>
                     <button data-testid="btnAdmin" className='btn-admin'>

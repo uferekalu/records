@@ -8,7 +8,7 @@ describe('<Header />', () => {
 
         const el = screen.getByTestId('recordTitle')
 
-        expect(el.innerHTML).toBe('Employee Records')
+        expect(el.innerHTML).toBe('Employees Record')
     })
 
     it('has an admin button', () => {

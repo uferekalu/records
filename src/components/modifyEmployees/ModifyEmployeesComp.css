@@ -1,0 +1,10 @@
+.modify-employees-container {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    margin-top: 20px;
+    padding-bottom: 6px;
+    background: #D1D1D1;
+    padding: 6px 0px 6px 6px;
+  }
+  
