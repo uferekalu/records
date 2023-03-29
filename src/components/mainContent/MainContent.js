@@ -33,12 +33,14 @@ export default function MainContent(props) {
                 </div>
                 <div>
                     <Form.Label
+                        data-testid="employees-details-heading"
                         className={props.isEmployeesDetails ? "isEmployeeDetails" : "notEmployeeDetails"}
                         onClick={handleEmployeesDetails}
                     >
                         EMPLOYEES DETAILS
                     </Form.Label>
                     <Form.Label
+                        data-testid="modify-employees-heading"
                         className={props.isModifyEmployees ? "isModifyEmployees" : "notModifyEmployees"}
                         onClick={handleModifyEmployees}>
                         MODIFY EMPLOYEES
@@ -53,13 +55,20 @@ export default function MainContent(props) {
                         gap: '10px'
                     }}>
                         <select
+                            data-testid="filterby-date-joined"
                             className='filterbydate'
                             onChange={(event) => props.setJoinedDate(event.target.value)}
                         >
                             <option value="">Filter by date joined</option>
                             {props.moderatedJoinedDates.length > 1 ? (
                                 props.moderatedJoinedDates.map((date, idx) => (
-                                    <option key={idx} value={date}>{date}</option>
+                                    <option
+                                        data-testid="date"
+                                        key={idx}
+                                        value={date}
+                                    >
+                                        {date}
+                                    </option>
                                 ))
                             ) : (
                                 <option value={props.moderatedJoinedDates[0]}>
@@ -68,13 +77,20 @@ export default function MainContent(props) {
                             )}
                         </select>
                         <select
+                            data-testid="filterby-role"
                             className='filterbyrole'
                             onChange={(event) => props.setRole(event.target.value)}
                         >
                             <option value="">Filter by role</option>
                             {props.roles.length > 1 ? (
                                 props.roles.map((role, idx) => (
-                                    <option key={idx} value={role}>{role}</option>
+                                    <option
+                                        data-testid="role"
+                                        key={idx}
+                                        value={role}
+                                    >
+                                        {role}
+                                    </option>
                                 ))
                             ) : (
                                 <option value={props.roles[0]}>{props.roles[0]}</option>
@@ -82,13 +98,20 @@ export default function MainContent(props) {
 
                         </select>
                         <select
+                            data-testid="filterby-country"
                             className='filterbycountry'
                             onChange={(event) => props.setCountry(event.target.value)}
                         >
                             <option value="">Filter by country</option>
                             {props.countries.length > 1 ? (
                                 props.countries.map((country, idx) => (
-                                    <option key={idx} value={country}>{country}</option>
+                                    <option
+                                        data-testid="country"
+                                        key={idx}
+                                        value={country}
+                                    >
+                                        {country}
+                                    </option>
                                 ))
                             ) : (
                                 <option value={props.countries[0]}>{props.countries[0]}</option>
@@ -102,12 +125,19 @@ export default function MainContent(props) {
                             Sort by
                         </Form.Label>
                         <select
+                            data-testid="sortby-level"
                             className='sortby-level'
                             onChange={(event) => props.setLevel(event.target.value)}
                         >
                             <option value={""}>Level</option>
                             {props.levels.map((level, idx) => (
-                                <option key={idx} value={level}>{level}</option>
+                                <option
+                                    data-testid="level"
+                                    key={idx}
+                                    value={level}
+                                >
+                                    {level}
+                                </option>
                             ))}
                         </select>
                     </div>

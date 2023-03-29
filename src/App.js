@@ -18,8 +18,6 @@ export default function App(props) {
   const [levels, setLevels] = useState([])
   const [level, setLevel] = useState("")
 
-  console.log('level', level)
-
   useEffect(() => {
     moderatedDates(props.employeesData, setModeratedJoinedDates)
     moderatedRoles(props.employeesData, setRoles)
