@@ -32,6 +32,8 @@ export default function Content(props) {
                     setLevels={props.setLevels}
                     level={props.level}
                     setLevel={props.setLevel}
+                    filterMethod={props.filterMethod}
+                    searchTerm={props.searchTerm}
                 />
             </div>
         </>

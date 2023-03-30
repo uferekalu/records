@@ -39,6 +39,7 @@ export default function Sidebar(props) {
                         className='search'
                         type='text'
                         placeholder='Search for an employee'
+                        onChange={props.filterMethod}
                     />
                 </div>
                 <div

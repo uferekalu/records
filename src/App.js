@@ -17,6 +17,13 @@ export default function App(props) {
   const [country, setCountry] = useState("")
   const [levels, setLevels] = useState([])
   const [level, setLevel] = useState("")
+  const [searchTerm, setSearchTerm] = useState("")
+
+  // console.log("serach term", searchTerm)
+
+  const filterMethod = (event) => {
+    setSearchTerm(event.target.value.toLowerCase())
+  }
 
   useEffect(() => {
     moderatedDates(props.employeesData, setModeratedJoinedDates)
@@ -38,6 +45,8 @@ export default function App(props) {
             setIsEmployees={setIsEmployees}
             isEditEmployees={isEditEmployees}
             setIsEditEmployees={setIsEditEmployees}
+            filterMethod={filterMethod}
+            searchTerm={searchTerm}
           />
           <Content
             employeesData={props.employeesData}
@@ -64,6 +73,8 @@ export default function App(props) {
             setLevels={setLevels}
             level={level}
             setLevel={setLevel}
+            filterMethod={filterMethod}
+            searchTerm={searchTerm}
           />
         </div>
       </div>

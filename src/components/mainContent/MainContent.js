@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Form } from 'react-bootstrap'
 import EmployeesDetailsComp from '../employeesDetails/EmployeesDetailsComp'
-import ModifyEmployeesComp from '../modifyEmployees/modifyEmployeesComp'
+import ModifyEmployeesComp from '../modifyEmployees/ModifyEmployeesComp'
 import CustomPagination from '../pagination/customPagination'
 import './MainContent.css'
 
@@ -36,6 +36,7 @@ export default function MainContent(props) {
                         className='main-content__search'
                         type="text"
                         placeholder="search"
+                        onChange={props.filterMethod}
                     />
                 </div>
                 <div>
@@ -157,6 +158,7 @@ export default function MainContent(props) {
                         role={props.role}
                         country={props.country}
                         level={props.level}
+                        searchTerm={props.searchTerm}
                     />
                 )}
                 {props.isModifyEmployees && (
@@ -167,6 +169,7 @@ export default function MainContent(props) {
                         role={props.role}
                         country={props.country}
                         level={props.level}
+                        searchTerm={props.searchTerm}
                     />
                 )}
                 <div className='paginagion-holder'>

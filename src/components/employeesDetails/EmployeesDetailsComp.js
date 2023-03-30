@@ -1,3 +1,4 @@
+import Detail from '../detail/Detail'
 import './EmployeesDetailsComp.css'
 
 const headings = [
@@ -23,7 +24,7 @@ export default function EmployeesDetailsComp(props) {
                     <>
                         <div
                             data-testid="employee-detail-heading"
-                            key={idx}
+                            key={heading.id}
                             style={(heading === "Role" || heading === "Level" || heading === "Email") ? {
                                 width: '15%',
                                 color: "black",
@@ -59,133 +60,57 @@ export default function EmployeesDetailsComp(props) {
                     </>
                 ))}
             </div>
-            {props.level ? (
+            {props.searchTerm?.length > 2 ? (
+                props.employeesData.slice((parseInt(props.pageNumber) * 10) - 10, parseInt(props.pageNumber) * 10)
+                    .map((data, idx) =>
+                        data.id.toString().includes(props.searchTerm) ? (
+                            <>
+                                <Detail
+                                    idx={idx}
+                                    data={data}
+                                />
+                            </>
+                        ) : data.name.toLowerCase().includes(props.searchTerm) ? (
+                            <>
+                                <Detail
+                                    idx={idx}
+                                    data={data}
+                                />
+                            </>
+                        ) : data.dateJoined.includes(props.searchTerm) ? (
+                            <>
+                                <Detail
+                                    idx={idx}
+                                    data={data}
+                                />
+                            </>
+                        ) : data.role.toLowerCase().includes(props.searchTerm) ? (
+                            <>
+                                <Detail
+                                    idx={idx}
+                                    data={data}
+                                />
+                            </>
+                        ) : data.level.toLowerCase().includes(props.searchTerm) ? (
+                            <>
+                                <Detail
+                                    idx={idx}
+                                    data={data}
+                                />
+                            </>
+                        ) : (
+                            <></>
+                        )
+                    )
+            ) : props.level ? (
                 props.employeesData.filter((data) => data.level === props.level)
                     .slice((parseInt(props.pageNumber) * 10) - 10, parseInt(props.pageNumber) * 10)
                     .map((data, idx) => (
                         <>
-                            <div
-                                key={idx}
-                                style={idx === 0 ? {
-                                    display: "flex",
-                                    justifyContent: 'flex-start',
-                                    width: '100%',
-                                    marginTop: "10px",
-                                } : {
-                                    display: "flex",
-                                    justifyContent: 'flex-start',
-                                    width: '100%',
-                                    marginTop: "20px"
-                                }}>
-                                <div style={{
-                                    width: '10.8%',
-                                    fontSize: '10px',
-                                    color: "black",
-                                    fontWeight: 600
-                                }}>
-                                    {data.id}
-                                </div>
-                                <div style={{
-                                    width: '10.8%',
-                                    fontSize: '10px',
-                                    color: "black",
-                                    fontWeight: 600,
-                                    marginLeft: '-30px'
-                                }}>
-                                    {data.name}
-                                </div>
-                                <div style={{
-                                    width: '10.8%',
-                                    fontSize: '10px',
-                                    color: "black",
-                                    fontWeight: 600,
-                                    marginLeft: '7px'
-                                }}>
-                                    {data.dateJoined}
-                                </div>
-                                <div style={{
-                                    width: '15%',
-                                    fontSize: '10px',
-                                    color: "black",
-                                    fontWeight: 600,
-                                    marginLeft: '-15px',
-                                }}>
-                                    {data.role.length > 20 ?
-                                        data.role.slice(0, 20) + "..."
-                                        : data.role}
-                                </div>
-                                <div style={{
-                                    width: '15%',
-                                    fontSize: '10px',
-                                    color: "black",
-                                    fontWeight: 600,
-                                    marginLeft: '-7px'
-                                }}>
-                                    {data.level}
-                                </div>
-                                <div style={{
-                                    width: '10.8%',
-                                    fontSize: '10px',
-                                    color: "black",
-                                    fontWeight: 600,
-                                    marginLeft: '-10px'
-                                }}>
-                                    {data.country}
-                                </div>
-                                <div style={{
-                                    width: '15%',
-                                    fontSize: '10px',
-                                    color: "black",
-                                    fontWeight: 600,
-                                    marginLeft: '-40px'
-                                }}>
-                                    {data.email}
-                                </div>
-                                <div style={{
-                                    width: '15%',
-                                    fontSize: '10px',
-                                    color: "black",
-                                    fontWeight: 600,
-                                    marginLeft: '-20px'
-                                }}>
-                                    {data.address.length > 10 ?
-                                        data.address.slice(0, 10) + "..."
-                                        : data.address}
-                                </div>
-                                <div style={{
-                                    width: '10.8%',
-                                    fontSize: '10px',
-                                    color: "black",
-                                    fontWeight: 600,
-                                    marginLeft: '-60px'
-                                }}>
-                                    {data.department.length > 10 ?
-                                        data.department.slice(0, 10) + "..."
-                                        : data.department}
-                                </div>
-                                <div style={{
-                                    width: '10.8%',
-                                    display: 'flex',
-                                    gap: '10px',
-                                    marginLeft: '-60px'
-                                }}>
-                                    <img
-                                        // eslint-disable-next-line jsx-a11y/aria-role
-                                        role="action"
-                                        style={{
-                                            marginLeft: "40px",
-                                            cursor: 'pointer'
-                                        }}
-                                        src={process.env.PUBLIC_URL + data.actions[0]} alt="action" />
-                                    <img
-                                        // eslint-disable-next-line jsx-a11y/aria-role
-                                        role="action1"
-                                        style={{
-                                            cursor: 'pointer'
-                                        }}
-                                        src={process.env.PUBLIC_URL + data.actions[1]} alt="action" />
-                                </div>
-                            </div>
+                            <Detail
+                                idx={idx}
+                                data={data}
+                            />
                         </>
                     ))
             ) : props.country ? (
@@ -193,128 +118,10 @@ export default function EmployeesDetailsComp(props) {
                     .slice((parseInt(props.pageNumber) * 10) - 10, parseInt(props.pageNumber) * 10)
                     .map((data, idx) => (
                         <>
-                            <div
-                                key={idx}
-                                style={idx === 0 ? {
-                                    display: "flex",
-                                    justifyContent: 'flex-start',
-                                    width: '100%',
-                                    marginTop: "10px",
-                                } : {
-                                    display: "flex",
-                                    justifyContent: 'flex-start',
-                                    width: '100%',
-                                    marginTop: "20px"
-                                }}>
-                                <div style={{
-                                    width: '10.8%',
-                                    fontSize: '10px',
-                                    color: "black",
-                                    fontWeight: 600
-                                }}>
-                                    {data.id}
-                                </div>
-                                <div style={{
-                                    width: '10.8%',
-                                    fontSize: '10px',
-                                    color: "black",
-                                    fontWeight: 600,
-                                    marginLeft: '-30px'
-                                }}>
-                                    {data.name}
-                                </div>
-                                <div style={{
-                                    width: '10.8%',
-                                    fontSize: '10px',
-                                    color: "black",
-                                    fontWeight: 600,
-                                    marginLeft: '7px'
-                                }}>
-                                    {data.dateJoined}
-                                </div>
-                                <div style={{
-                                    width: '15%',
-                                    fontSize: '10px',
-                                    color: "black",
-                                    fontWeight: 600,
-                                    marginLeft: '-15px',
-                                }}>
-                                    {data.role.length > 20 ?
-                                        data.role.slice(0, 20) + "..."
-                                        : data.role}
-                                </div>
-                                <div style={{
-                                    width: '15%',
-                                    fontSize: '10px',
-                                    color: "black",
-                                    fontWeight: 600,
-                                    marginLeft: '-7px'
-                                }}>
-                                    {data.level}
-                                </div>
-                                <div style={{
-                                    width: '10.8%',
-                                    fontSize: '10px',
-                                    color: "black",
-                                    fontWeight: 600,
-                                    marginLeft: '-10px'
-                                }}>
-                                    {data.country}
-                                </div>
-                                <div style={{
-                                    width: '15%',
-                                    fontSize: '10px',
-                                    color: "black",
-                                    fontWeight: 600,
-                                    marginLeft: '-40px'
-                                }}>
-                                    {data.email}
-                                </div>
-                                <div style={{
-                                    width: '15%',
-                                    fontSize: '10px',
-                                    color: "black",
-                                    fontWeight: 600,
-                                    marginLeft: '-20px'
-                                }}>
-                                    {data.address.length > 10 ?
-                                        data.address.slice(0, 10) + "..."
-                                        : data.address}
-                                </div>
-                                <div style={{
-                                    width: '10.8%',
-                                    fontSize: '10px',
-                                    color: "black",
-                                    fontWeight: 600,
-                                    marginLeft: '-60px'
-                                }}>
-                                    {data.department.length > 10 ?
-                                        data.department.slice(0, 10) + "..."
-                                        : data.department}
-                                </div>
-                                <div style={{
-                                    width: '10.8%',
-                                    display: 'flex',
-                                    gap: '10px',
-                                    marginLeft: '-60px'
-                                }}>
-                                    <img
-                                        // eslint-disable-next-line jsx-a11y/aria-role
-                                        role="action"
-                                        style={{
-                                            marginLeft: "40px",
-                                            cursor: 'pointer'
-                                        }}
-                                        src={process.env.PUBLIC_URL + data.actions[0]} alt="action" />
-                                    <img
-                                        // eslint-disable-next-line jsx-a11y/aria-role
-                                        role="action1"
-                                        style={{
-                                            cursor: 'pointer'
-                                        }}
-                                        src={process.env.PUBLIC_URL + data.actions[1]} alt="action" />
-                                </div>
-                            </div>
+                            <Detail
+                                idx={idx}
+                                data={data}
+                            />
                         </>
                     ))
             ) : props.role ? (
@@ -322,128 +129,10 @@ export default function EmployeesDetailsComp(props) {
                     .slice((parseInt(props.pageNumber) * 10) - 10, parseInt(props.pageNumber) * 10)
                     .map((data, idx) => (
                         <>
-                            <div
-                                key={idx}
-                                style={idx === 0 ? {
-                                    display: "flex",
-                                    justifyContent: 'flex-start',
-                                    width: '100%',
-                                    marginTop: "10px",
-                                } : {
-                                    display: "flex",
-                                    justifyContent: 'flex-start',
-                                    width: '100%',
-                                    marginTop: "20px"
-                                }}>
-                                <div style={{
-                                    width: '10.8%',
-                                    fontSize: '10px',
-                                    color: "black",
-                                    fontWeight: 600
-                                }}>
-                                    {data.id}
-                                </div>
-                                <div style={{
-                                    width: '10.8%',
-                                    fontSize: '10px',
-                                    color: "black",
-                                    fontWeight: 600,
-                                    marginLeft: '-30px'
-                                }}>
-                                    {data.name}
-                                </div>
-                                <div style={{
-                                    width: '10.8%',
-                                    fontSize: '10px',
-                                    color: "black",
-                                    fontWeight: 600,
-                                    marginLeft: '7px'
-                                }}>
-                                    {data.dateJoined}
-                                </div>
-                                <div style={{
-                                    width: '15%',
-                                    fontSize: '10px',
-                                    color: "black",
-                                    fontWeight: 600,
-                                    marginLeft: '-15px',
-                                }}>
-                                    {data.role.length > 20 ?
-                                        data.role.slice(0, 20) + "..."
-                                        : data.role}
-                                </div>
-                                <div style={{
-                                    width: '15%',
-                                    fontSize: '10px',
-                                    color: "black",
-                                    fontWeight: 600,
-                                    marginLeft: '-7px'
-                                }}>
-                                    {data.level}
-                                </div>
-                                <div style={{
-                                    width: '10.8%',
-                                    fontSize: '10px',
-                                    color: "black",
-                                    fontWeight: 600,
-                                    marginLeft: '-10px'
-                                }}>
-                                    {data.country}
-                                </div>
-                                <div style={{
-                                    width: '15%',
-                                    fontSize: '10px',
-                                    color: "black",
-                                    fontWeight: 600,
-                                    marginLeft: '-40px'
-                                }}>
-                                    {data.email}
-                                </div>
-                                <div style={{
-                                    width: '15%',
-                                    fontSize: '10px',
-                                    color: "black",
-                                    fontWeight: 600,
-                                    marginLeft: '-20px'
-                                }}>
-                                    {data.address.length > 10 ?
-                                        data.address.slice(0, 10) + "..."
-                                        : data.address}
-                                </div>
-                                <div style={{
-                                    width: '10.8%',
-                                    fontSize: '10px',
-                                    color: "black",
-                                    fontWeight: 600,
-                                    marginLeft: '-60px'
-                                }}>
-                                    {data.department.length > 10 ?
-                                        data.department.slice(0, 10) + "..."
-                                        : data.department}
-                                </div>
-                                <div style={{
-                                    width: '10.8%',
-                                    display: 'flex',
-                                    gap: '10px',
-                                    marginLeft: '-60px'
-                                }}>
-                                    <img
-                                        // eslint-disable-next-line jsx-a11y/aria-role
-                                        role="action"
-                                        style={{
-                                            marginLeft: "40px",
-                                            cursor: 'pointer'
-                                        }}
-                                        src={process.env.PUBLIC_URL + data.actions[0]} alt="action" />
-                                    <img
-                                        // eslint-disable-next-line jsx-a11y/aria-role
-                                        role="action1"
-                                        style={{
-                                            cursor: 'pointer'
-                                        }}
-                                        src={process.env.PUBLIC_URL + data.actions[1]} alt="action" />
-                                </div>
-                            </div>
+                            <Detail
+                                idx={idx}
+                                data={data}
+                            />
                         </>
                     ))
             ) : props.joinedDate ? (
@@ -451,256 +140,20 @@ export default function EmployeesDetailsComp(props) {
                     .slice((parseInt(props.pageNumber) * 10) - 10, parseInt(props.pageNumber) * 10)
                     .map((data, idx) => (
                         <>
-                            <div
-                                key={idx}
-                                style={idx === 0 ? {
-                                    display: "flex",
-                                    justifyContent: 'flex-start',
-                                    width: '100%',
-                                    marginTop: "10px",
-                                } : {
-                                    display: "flex",
-                                    justifyContent: 'flex-start',
-                                    width: '100%',
-                                    marginTop: "20px"
-                                }}>
-                                <div style={{
-                                    width: '10.8%',
-                                    fontSize: '10px',
-                                    color: "black",
-                                    fontWeight: 600
-                                }}>
-                                    {data.id}
-                                </div>
-                                <div style={{
-                                    width: '10.8%',
-                                    fontSize: '10px',
-                                    color: "black",
-                                    fontWeight: 600,
-                                    marginLeft: '-30px'
-                                }}>
-                                    {data.name}
-                                </div>
-                                <div style={{
-                                    width: '10.8%',
-                                    fontSize: '10px',
-                                    color: "black",
-                                    fontWeight: 600,
-                                    marginLeft: '7px'
-                                }}>
-                                    {data.dateJoined}
-                                </div>
-                                <div style={{
-                                    width: '15%',
-                                    fontSize: '10px',
-                                    color: "black",
-                                    fontWeight: 600,
-                                    marginLeft: '-15px',
-                                }}>
-                                    {data.role.length > 20 ?
-                                        data.role.slice(0, 20) + "..."
-                                        : data.role}
-                                </div>
-                                <div style={{
-                                    width: '15%',
-                                    fontSize: '10px',
-                                    color: "black",
-                                    fontWeight: 600,
-                                    marginLeft: '-7px'
-                                }}>
-                                    {data.level}
-                                </div>
-                                <div style={{
-                                    width: '10.8%',
-                                    fontSize: '10px',
-                                    color: "black",
-                                    fontWeight: 600,
-                                    marginLeft: '-10px'
-                                }}>
-                                    {data.country}
-                                </div>
-                                <div style={{
-                                    width: '15%',
-                                    fontSize: '10px',
-                                    color: "black",
-                                    fontWeight: 600,
-                                    marginLeft: '-40px'
-                                }}>
-                                    {data.email}
-                                </div>
-                                <div style={{
-                                    width: '15%',
-                                    fontSize: '10px',
-                                    color: "black",
-                                    fontWeight: 600,
-                                    marginLeft: '-20px'
-                                }}>
-                                    {data.address.length > 10 ?
-                                        data.address.slice(0, 10) + "..."
-                                        : data.address}
-                                </div>
-                                <div style={{
-                                    width: '10.8%',
-                                    fontSize: '10px',
-                                    color: "black",
-                                    fontWeight: 600,
-                                    marginLeft: '-60px'
-                                }}>
-                                    {data.department.length > 10 ?
-                                        data.department.slice(0, 10) + "..."
-                                        : data.department}
-                                </div>
-                                <div style={{
-                                    width: '10.8%',
-                                    display: 'flex',
-                                    gap: '10px',
-                                    marginLeft: '-60px'
-                                }}>
-                                    <img
-                                        // eslint-disable-next-line jsx-a11y/aria-role
-                                        role="action"
-                                        style={{
-                                            marginLeft: "40px",
-                                            cursor: 'pointer'
-                                        }}
-                                        src={process.env.PUBLIC_URL + data.actions[0]} alt="action" />
-                                    <img
-                                        // eslint-disable-next-line jsx-a11y/aria-role
-                                        role="action1"
-                                        style={{
-                                            cursor: 'pointer'
-                                        }}
-                                        src={process.env.PUBLIC_URL + data.actions[1]} alt="action" />
-                                </div>
-                            </div>
+                            <Detail
+                                idx={idx}
+                                data={data}
+                            />
                         </>
                     ))
             ) :
                 props.employeesData.slice((parseInt(props.pageNumber) * 10) - 10, parseInt(props.pageNumber) * 10)
                     .map((data, idx) => (
                         <>
-                            <div
-                                key={idx}
-                                style={idx === 0 ? {
-                                    display: "flex",
-                                    justifyContent: 'flex-start',
-                                    width: '100%',
-                                    marginTop: "10px",
-                                } : {
-                                    display: "flex",
-                                    justifyContent: 'flex-start',
-                                    width: '100%',
-                                    marginTop: "20px"
-                                }}>
-                                <div style={{
-                                    width: '10.8%',
-                                    fontSize: '10px',
-                                    color: "black",
-                                    fontWeight: 600
-                                }}>
-                                    {data.id}
-                                </div>
-                                <div style={{
-                                    width: '10.8%',
-                                    fontSize: '10px',
-                                    color: "black",
-                                    fontWeight: 600,
-                                    marginLeft: '-30px'
-                                }}>
-                                    {data.name}
-                                </div>
-                                <div style={{
-                                    width: '10.8%',
-                                    fontSize: '10px',
-                                    color: "black",
-                                    fontWeight: 600,
-                                    marginLeft: '7px'
-                                }}>
-                                    {data.dateJoined}
-                                </div>
-                                <div style={{
-                                    width: '15%',
-                                    fontSize: '10px',
-                                    color: "black",
-                                    fontWeight: 600,
-                                    marginLeft: '-15px',
-                                }}>
-                                    {data.role.length > 20 ?
-                                        data.role.slice(0, 20) + "..."
-                                        : data.role}
-                                </div>
-                                <div style={{
-                                    width: '15%',
-                                    fontSize: '10px',
-                                    color: "black",
-                                    fontWeight: 600,
-                                    marginLeft: '-7px'
-                                }}>
-                                    {data.level}
-                                </div>
-                                <div style={{
-                                    width: '10.8%',
-                                    fontSize: '10px',
-                                    color: "black",
-                                    fontWeight: 600,
-                                    marginLeft: '-10px'
-                                }}>
-                                    {data.country}
-                                </div>
-                                <div style={{
-                                    width: '15%',
-                                    fontSize: '10px',
-                                    color: "black",
-                                    fontWeight: 600,
-                                    marginLeft: '-40px'
-                                }}>
-                                    {data.email}
-                                </div>
-                                <div style={{
-                                    width: '15%',
-                                    fontSize: '10px',
-                                    color: "black",
-                                    fontWeight: 600,
-                                    marginLeft: '-20px'
-                                }}>
-                                    {data.address.length > 10 ?
-                                        data.address.slice(0, 10) + "..."
-                                        : data.address}
-                                </div>
-                                <div style={{
-                                    width: '10.8%',
-                                    fontSize: '10px',
-                                    color: "black",
-                                    fontWeight: 600,
-                                    marginLeft: '-60px'
-                                }}>
-                                    {data.department.length > 10 ?
-                                        data.department.slice(0, 10) + "..."
-                                        : data.department}
-                                </div>
-                                <div style={{
-                                    width: '10.8%',
-                                    display: 'flex',
-                                    gap: '10px',
-                                    marginLeft: '-60px'
-                                }}>
-                                    <img
-                                        // eslint-disable-next-line jsx-a11y/aria-role
-                                        role="action"
-                                        style={{
-                                            marginLeft: "40px",
-                                            cursor: 'pointer'
-                                        }}
-                                        src={process.env.PUBLIC_URL + data.actions[0]} alt="action" />
-                                    <img
-                                        // eslint-disable-next-line jsx-a11y/aria-role
-                                        role="action1"
-                                        style={{
-                                            cursor: 'pointer'
-                                        }}
-                                        src={process.env.PUBLIC_URL + data.actions[1]} alt="action" />
-                                </div>
-                            </div>
+                            <Detail
+                                idx={idx}
+                                data={data}
+                            />
                         </>
                     ))}
         </>
