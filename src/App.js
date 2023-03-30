@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Content from "./components/content/Content";
 import Sidebar from "./components/sidebar/Sidebar";
+// import './App.scss'
 import './App.css'
 import { moderatedCountries, moderatedDates, moderatedLevels, moderatedRoles } from "./utils/utility";
 

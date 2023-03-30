@@ -1,4 +1,47 @@
+import { useState } from "react"
+
 export default function Detail(props) {
+    console.log("full info", props.fullInfo)
+
+    const handleSetId = () => {
+        props.setEmpoyeeId(props.id)
+    }
+
+    const handleEmployeeId = () => {
+        props.setEmpoyeeId(props.id)
+    }
+
+    const handleFullInfo = () => {
+        const filteredData = props.employeesData.filter((data) => data.id === props.employeeId)[0]
+        props.setFullInfo((prevState) => {
+            return {
+                ...prevState,
+                id: filteredData?.id,
+                name: filteredData?.name,
+                dateJoined: filteredData?.dateJoined,
+                role: filteredData?.role,
+                level: filteredData?.level,
+                country: filteredData?.country,
+                email: filteredData?.email,
+                address: filteredData?.address,
+                department: filteredData?.department
+            }
+        })
+    }
+
+    function handleData(id) {
+        const data = props.employeesData[id]
+        props.setEditId(data.id)
+        props.setEmployeeName(data.name)
+        props.setDateJoined(data.dateJoined)
+        props.setEditRole(data.role)
+        props.setEditLevel(data.level)
+        props.setEditCountry(data.country)
+        props.setEmail(data.email)
+        props.setAddress(data.address)
+        props.setDepartment(data.department)
+    }
+
     return (
         <>
             <div
@@ -107,6 +150,11 @@ export default function Detail(props) {
                     marginLeft: '-60px'
                 }}>
                     <img
+                        onClick={() => {
+                            handleSetId()
+                            props.setDetails(true)
+                            handleFullInfo()
+                        }}
                         // eslint-disable-next-line jsx-a11y/aria-role
                         role="action"
                         style={{
@@ -115,6 +163,11 @@ export default function Detail(props) {
                         }}
                         src={process.env.PUBLIC_URL + props.data.actions[0]} alt="action" />
                     <img
+                        onClick={() => {
+                            props.setEditModal(true)
+                            handleData(props.idx)
+                            handleEmployeeId()
+                        }}
                         // eslint-disable-next-line jsx-a11y/aria-role
                         role="action1"
                         style={{
