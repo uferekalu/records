@@ -48,9 +48,11 @@ export default function App(props) {
         <div style={{
           display: "flex",
           flexDirection: "column",
-          width: '100%'
+          width: '100%',
+          overflowX: "hidden"
         }}>
           <MobileRecords
+            employeesData={props.employeesData}
             isEmployeesDetails={isEmployeesDetails}
             setIsEmployeeDetails={setIsEmployeeDetails}
             isModifyEmployees={isModifyEmployees}
@@ -61,6 +63,21 @@ export default function App(props) {
             setIsEditEmployees={setIsEditEmployees}
             filterMethod={filterMethod}
             searchTerm={searchTerm}
+            moderatedJoinedDates={moderatedJoinedDates}
+            joinedDate={joinedDate}
+            setJoinedDate={setJoinedDate}
+            roles={roles}
+            setRoles={setRoles}
+            role={role}
+            setRole={setRole}
+            countries={countries}
+            setCountries={setCountries}
+            country={country}
+            setCountry={setCountry}
+            levels={levels}
+            setLevels={setLevels}
+            level={level}
+            setLevel={setLevel}
           />
         </div>
       )}
