@@ -2,6 +2,22 @@ import { Button, Form } from "react-bootstrap";
 import GeneralModal from "./Modal";
 
 export default function DetailModal(props) {
+    const handleEmployeeId = () => {
+        props.setEmpoyeeId(props.id)
+    }
+
+    function handleData(id) {
+        const data = props.employeesData.filter((data) => data.id === id)[0]
+        props.setEditId(data.id)
+        props.setEmployeeName(data.name)
+        props.setDateJoined(data.dateJoined)
+        props.setEditRole(data.role)
+        props.setEditLevel(data.level)
+        props.setEditCountry(data.country)
+        props.setEmail(data.email)
+        props.setAddress(data.address)
+        props.setDepartment(data.department)
+    }
     return (
         <>
             <GeneralModal
@@ -204,7 +220,12 @@ export default function DetailModal(props) {
                             }}>Ok
                         </Button>
                         <Button
-                            // onClick={props.handleEdit}
+                            onClick={() => {
+                                props.setEditModal(true)
+                                props.handleSetDetails()
+                                handleData(props.id)
+                                handleEmployeeId()
+                            }}
                             style={{
                                 background: "transparent",
                                 border: "1px solid #00902F",

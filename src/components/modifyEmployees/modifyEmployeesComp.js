@@ -66,36 +66,171 @@ export default function ModifyEmployeesComp(props) {
                         data.id.toString().includes(props.searchTerm) ? (
                             <>
                                 <Detail
-                                    idx={idx}
+                                    id={data.id}
                                     data={data}
+                                    employeesData={props.employeesData}
+                                    employeeId={props.employeeId}
+                                    setEmpoyeeId={props.setEmpoyeeId}
+                                    details={props.details}
+                                    setDetails={props.setDetails}
+                                    fullInfo={props.fullInfo}
+                                    setFullInfo={props.setFullInfo}
+                                    setEditModal={props.setEditModal}
+                                    idx={idx}
+                                    editId={props.editId}
+                                    setEditId={props.setEditId}
+                                    employeeName={props.employeeName}
+                                    setEmployeeName={props.setEmployeeName}
+                                    dateJoined={props.dateJoined}
+                                    setDateJoined={props.setDateJoined}
+                                    editRole={props.editRole}
+                                    setEditRole={props.setEditRole}
+                                    editLevel={props.editLevel}
+                                    setEditLevel={props.setEditLevel}
+                                    editCountry={props.editCountry}
+                                    setEditCountry={props.setEditCountry}
+                                    email={props.email}
+                                    setEmail={props.setEmail}
+                                    address={props.address}
+                                    setAddress={props.setAddress}
+                                    department={props.department}
+                                    setDepartment={props.setDepartment}
                                 />
                             </>
                         ) : data.name.toLowerCase().includes(props.searchTerm) ? (
                             <>
                                 <Detail
-                                    idx={idx}
+                                    id={data.id}
                                     data={data}
+                                    employeesData={props.employeesData}
+                                    employeeId={props.employeeId}
+                                    setEmpoyeeId={props.setEmpoyeeId}
+                                    details={props.details}
+                                    setDetails={props.setDetails}
+                                    fullInfo={props.fullInfo}
+                                    setFullInfo={props.setFullInfo}
+                                    setEditModal={props.setEditModal}
+                                    idx={idx}
+                                    editId={props.editId}
+                                    setEditId={props.setEditId}
+                                    employeeName={props.employeeName}
+                                    setEmployeeName={props.setEmployeeName}
+                                    dateJoined={props.dateJoined}
+                                    setDateJoined={props.setDateJoined}
+                                    editRole={props.editRole}
+                                    setEditRole={props.setEditRole}
+                                    editLevel={props.editLevel}
+                                    setEditLevel={props.setEditLevel}
+                                    editCountry={props.editCountry}
+                                    setEditCountry={props.setEditCountry}
+                                    email={props.email}
+                                    setEmail={props.setEmail}
+                                    address={props.address}
+                                    setAddress={props.setAddress}
+                                    department={props.department}
+                                    setDepartment={props.setDepartment}
                                 />
                             </>
                         ) : data.dateJoined.includes(props.searchTerm) ? (
                             <>
                                 <Detail
-                                    idx={idx}
+                                    id={data.id}
                                     data={data}
+                                    employeesData={props.employeesData}
+                                    employeeId={props.employeeId}
+                                    setEmpoyeeId={props.setEmpoyeeId}
+                                    details={props.details}
+                                    setDetails={props.setDetails}
+                                    fullInfo={props.fullInfo}
+                                    setFullInfo={props.setFullInfo}
+                                    setEditModal={props.setEditModal}
+                                    idx={idx}
+                                    editId={props.editId}
+                                    setEditId={props.setEditId}
+                                    employeeName={props.employeeName}
+                                    setEmployeeName={props.setEmployeeName}
+                                    dateJoined={props.dateJoined}
+                                    setDateJoined={props.setDateJoined}
+                                    editRole={props.editRole}
+                                    setEditRole={props.setEditRole}
+                                    editLevel={props.editLevel}
+                                    setEditLevel={props.setEditLevel}
+                                    editCountry={props.editCountry}
+                                    setEditCountry={props.setEditCountry}
+                                    email={props.email}
+                                    setEmail={props.setEmail}
+                                    address={props.address}
+                                    setAddress={props.setAddress}
+                                    department={props.department}
+                                    setDepartment={props.setDepartment}
                                 />
                             </>
                         ) : data.role.toLowerCase().includes(props.searchTerm) ? (
                             <>
                                 <Detail
-                                    idx={idx}
+                                    id={data.id}
                                     data={data}
+                                    employeesData={props.employeesData}
+                                    employeeId={props.employeeId}
+                                    setEmpoyeeId={props.setEmpoyeeId}
+                                    details={props.details}
+                                    setDetails={props.setDetails}
+                                    fullInfo={props.fullInfo}
+                                    setFullInfo={props.setFullInfo}
+                                    setEditModal={props.setEditModal}
+                                    idx={idx}
+                                    editId={props.editId}
+                                    setEditId={props.setEditId}
+                                    employeeName={props.employeeName}
+                                    setEmployeeName={props.setEmployeeName}
+                                    dateJoined={props.dateJoined}
+                                    setDateJoined={props.setDateJoined}
+                                    editRole={props.editRole}
+                                    setEditRole={props.setEditRole}
+                                    editLevel={props.editLevel}
+                                    setEditLevel={props.setEditLevel}
+                                    editCountry={props.editCountry}
+                                    setEditCountry={props.setEditCountry}
+                                    email={props.email}
+                                    setEmail={props.setEmail}
+                                    address={props.address}
+                                    setAddress={props.setAddress}
+                                    department={props.department}
+                                    setDepartment={props.setDepartment}
                                 />
                             </>
                         ) : data.level.toLowerCase().includes(props.searchTerm) ? (
                             <>
                                 <Detail
-                                    idx={idx}
+                                    id={data.id}
                                     data={data}
+                                    employeesData={props.employeesData}
+                                    employeeId={props.employeeId}
+                                    setEmpoyeeId={props.setEmpoyeeId}
+                                    details={props.details}
+                                    setDetails={props.setDetails}
+                                    fullInfo={props.fullInfo}
+                                    setFullInfo={props.setFullInfo}
+                                    setEditModal={props.setEditModal}
+                                    idx={idx}
+                                    editId={props.editId}
+                                    setEditId={props.setEditId}
+                                    employeeName={props.employeeName}
+                                    setEmployeeName={props.setEmployeeName}
+                                    dateJoined={props.dateJoined}
+                                    setDateJoined={props.setDateJoined}
+                                    editRole={props.editRole}
+                                    setEditRole={props.setEditRole}
+                                    editLevel={props.editLevel}
+                                    setEditLevel={props.setEditLevel}
+                                    editCountry={props.editCountry}
+                                    setEditCountry={props.setEditCountry}
+                                    email={props.email}
+                                    setEmail={props.setEmail}
+                                    address={props.address}
+                                    setAddress={props.setAddress}
+                                    department={props.department}
+                                    setDepartment={props.setDepartment}
                                 />
                             </>
                         ) : (
@@ -108,8 +243,35 @@ export default function ModifyEmployeesComp(props) {
                     .map((data, idx) => (
                         <>
                             <Detail
-                                idx={idx}
+                                id={data.id}
                                 data={data}
+                                employeesData={props.employeesData}
+                                employeeId={props.employeeId}
+                                setEmpoyeeId={props.setEmpoyeeId}
+                                details={props.details}
+                                setDetails={props.setDetails}
+                                fullInfo={props.fullInfo}
+                                setFullInfo={props.setFullInfo}
+                                setEditModal={props.setEditModal}
+                                idx={idx}
+                                editId={props.editId}
+                                setEditId={props.setEditId}
+                                employeeName={props.employeeName}
+                                setEmployeeName={props.setEmployeeName}
+                                dateJoined={props.dateJoined}
+                                setDateJoined={props.setDateJoined}
+                                editRole={props.editRole}
+                                setEditRole={props.setEditRole}
+                                editLevel={props.editLevel}
+                                setEditLevel={props.setEditLevel}
+                                editCountry={props.editCountry}
+                                setEditCountry={props.setEditCountry}
+                                email={props.email}
+                                setEmail={props.setEmail}
+                                address={props.address}
+                                setAddress={props.setAddress}
+                                department={props.department}
+                                setDepartment={props.setDepartment}
                             />
                         </>
                     ))
@@ -119,8 +281,35 @@ export default function ModifyEmployeesComp(props) {
                     .map((data, idx) => (
                         <>
                             <Detail
-                                idx={idx}
+                                id={data.id}
                                 data={data}
+                                employeesData={props.employeesData}
+                                employeeId={props.employeeId}
+                                setEmpoyeeId={props.setEmpoyeeId}
+                                details={props.details}
+                                setDetails={props.setDetails}
+                                fullInfo={props.fullInfo}
+                                setFullInfo={props.setFullInfo}
+                                setEditModal={props.setEditModal}
+                                idx={idx}
+                                editId={props.editId}
+                                setEditId={props.setEditId}
+                                employeeName={props.employeeName}
+                                setEmployeeName={props.setEmployeeName}
+                                dateJoined={props.dateJoined}
+                                setDateJoined={props.setDateJoined}
+                                editRole={props.editRole}
+                                setEditRole={props.setEditRole}
+                                editLevel={props.editLevel}
+                                setEditLevel={props.setEditLevel}
+                                editCountry={props.editCountry}
+                                setEditCountry={props.setEditCountry}
+                                email={props.email}
+                                setEmail={props.setEmail}
+                                address={props.address}
+                                setAddress={props.setAddress}
+                                department={props.department}
+                                setDepartment={props.setDepartment}
                             />
                         </>
                     ))
@@ -130,8 +319,35 @@ export default function ModifyEmployeesComp(props) {
                     .map((data, idx) => (
                         <>
                             <Detail
-                                idx={idx}
+                                id={data.id}
                                 data={data}
+                                employeesData={props.employeesData}
+                                employeeId={props.employeeId}
+                                setEmpoyeeId={props.setEmpoyeeId}
+                                details={props.details}
+                                setDetails={props.setDetails}
+                                fullInfo={props.fullInfo}
+                                setFullInfo={props.setFullInfo}
+                                setEditModal={props.setEditModal}
+                                idx={idx}
+                                editId={props.editId}
+                                setEditId={props.setEditId}
+                                employeeName={props.employeeName}
+                                setEmployeeName={props.setEmployeeName}
+                                dateJoined={props.dateJoined}
+                                setDateJoined={props.setDateJoined}
+                                editRole={props.editRole}
+                                setEditRole={props.setEditRole}
+                                editLevel={props.editLevel}
+                                setEditLevel={props.setEditLevel}
+                                editCountry={props.editCountry}
+                                setEditCountry={props.setEditCountry}
+                                email={props.email}
+                                setEmail={props.setEmail}
+                                address={props.address}
+                                setAddress={props.setAddress}
+                                department={props.department}
+                                setDepartment={props.setDepartment}
                             />
                         </>
                     ))
@@ -141,8 +357,35 @@ export default function ModifyEmployeesComp(props) {
                     .map((data, idx) => (
                         <>
                             <Detail
-                                idx={idx}
+                                id={data.id}
                                 data={data}
+                                employeesData={props.employeesData}
+                                employeeId={props.employeeId}
+                                setEmpoyeeId={props.setEmpoyeeId}
+                                details={props.details}
+                                setDetails={props.setDetails}
+                                fullInfo={props.fullInfo}
+                                setFullInfo={props.setFullInfo}
+                                setEditModal={props.setEditModal}
+                                idx={idx}
+                                editId={props.editId}
+                                setEditId={props.setEditId}
+                                employeeName={props.employeeName}
+                                setEmployeeName={props.setEmployeeName}
+                                dateJoined={props.dateJoined}
+                                setDateJoined={props.setDateJoined}
+                                editRole={props.editRole}
+                                setEditRole={props.setEditRole}
+                                editLevel={props.editLevel}
+                                setEditLevel={props.setEditLevel}
+                                editCountry={props.editCountry}
+                                setEditCountry={props.setEditCountry}
+                                email={props.email}
+                                setEmail={props.setEmail}
+                                address={props.address}
+                                setAddress={props.setAddress}
+                                department={props.department}
+                                setDepartment={props.setDepartment}
                             />
                         </>
                     ))
@@ -151,8 +394,35 @@ export default function ModifyEmployeesComp(props) {
                     .map((data, idx) => (
                         <>
                             <Detail
-                                idx={idx}
+                                id={data.id}
                                 data={data}
+                                employeesData={props.employeesData}
+                                employeeId={props.employeeId}
+                                setEmpoyeeId={props.setEmpoyeeId}
+                                details={props.details}
+                                setDetails={props.setDetails}
+                                fullInfo={props.fullInfo}
+                                setFullInfo={props.setFullInfo}
+                                setEditModal={props.setEditModal}
+                                idx={idx}
+                                editId={props.editId}
+                                setEditId={props.setEditId}
+                                employeeName={props.employeeName}
+                                setEmployeeName={props.setEmployeeName}
+                                dateJoined={props.dateJoined}
+                                setDateJoined={props.setDateJoined}
+                                editRole={props.editRole}
+                                setEditRole={props.setEditRole}
+                                editLevel={props.editLevel}
+                                setEditLevel={props.setEditLevel}
+                                editCountry={props.editCountry}
+                                setEditCountry={props.setEditCountry}
+                                email={props.email}
+                                setEmail={props.setEmail}
+                                address={props.address}
+                                setAddress={props.setAddress}
+                                department={props.department}
+                                setDepartment={props.setDepartment}
                             />
                         </>
                     ))}

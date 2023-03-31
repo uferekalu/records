@@ -39,6 +39,9 @@ export default function MainContent(props) {
 
     const [editModal, setEditModal] = useState(false)
 
+    const handleSetDetails = () => {
+        setDetails(false)
+    }
     const onChangeEmployeeName = (event) => {
         setEmployeeName(event.target.value)
     }
@@ -78,7 +81,7 @@ export default function MainContent(props) {
         data.email = email
         data.address = address
         data.department = department
-        
+
 
         props.employeesData.splice(editId, 1, data)
         setEditModal(false)
@@ -321,6 +324,19 @@ export default function MainContent(props) {
                     email={fullInfo.email}
                     address={fullInfo.address}
                     department={fullInfo.department}
+                    setEditModal={setEditModal}
+                    setEmpoyeeId={setEmpoyeeId}
+                    setEditId={setEditId}
+                    setEmployeeName={setEmployeeName}
+                    setDateJoined={setDateJoined}
+                    setEditRole={setEditRole}
+                    setEditLevel={setEditLevel}
+                    setEditCountry={setEditCountry}
+                    setEmail={setEmail}
+                    setAddress={setAddress}
+                    setDepartment={setDepartment}
+                    employeesData={props.employeesData}
+                    handleSetDetails={handleSetDetails}
                 />
                 <EditModal
                     editModal={editModal}

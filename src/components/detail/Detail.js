@@ -1,8 +1,6 @@
 import { useState } from "react"
 
 export default function Detail(props) {
-    console.log("full info", props.fullInfo)
-
     const handleSetId = () => {
         props.setEmpoyeeId(props.id)
     }

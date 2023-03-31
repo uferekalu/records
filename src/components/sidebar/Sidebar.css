@@ -51,7 +51,6 @@
   background: #A6A6A6;
   border-radius: 5px;
   padding: 8px;
-
 }
 
 .employeeicon {
@@ -81,5 +80,11 @@
   cursor: pointer;
   filter: grayscale(60%);
   filter: brightness(0.25);
+}
+
+@media screen and (max-width: 1060px) {
+  .employees-holder {
+    margin-top: 20px;
+  }
 }
 
