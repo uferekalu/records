@@ -72,9 +72,9 @@ export default function MobilePagination(props) {
                         }}>
                         <Form.Label style={{
                             color: "#7CC427",
-                            fontSize: "16px",
-                            marginTop: '3px',
-                            fontWeight: '500'
+                            fontSize: "13px",
+                            marginTop: '1px',
+                            fontWeight: '600'
                         }}>
                             {"<"}
                         </Form.Label>
@@ -94,9 +94,9 @@ export default function MobilePagination(props) {
                         }}>
                         <Form.Label style={{
                             color: "white",
-                            fontSize: "16px",
-                            marginTop: '2px',
-                            fontWeight: '500'
+                            fontSize: "13px",
+                            marginTop: '1px',
+                            fontWeight: '600'
                         }}>
                             {">"}
                         </Form.Label>

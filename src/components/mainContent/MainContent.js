@@ -145,7 +145,7 @@ export default function MainContent(props) {
                             onChange={(event) => props.setJoinedDate(event.target.value)}
                         >
                             <option value="">Filter by date joined</option>
-                            {props.moderatedJoinedDates.length > 1 ? (
+                            {props.moderatedJoinedDates?.length > 1 ? (
                                 props.moderatedJoinedDates.map((date, idx) => (
                                     <option
                                         data-testid="date"
@@ -156,9 +156,7 @@ export default function MainContent(props) {
                                     </option>
                                 ))
                             ) : (
-                                <option value={props.moderatedJoinedDates[0]}>
-                                    {props.moderatedJoinedDates[0]}
-                                </option>
+                                undefined
                             )}
                         </select>
                         <select
@@ -167,7 +165,7 @@ export default function MainContent(props) {
                             onChange={(event) => props.setRole(event.target.value)}
                         >
                             <option value="">Filter by role</option>
-                            {props.roles.length > 1 ? (
+                            {props.roles?.length > 1 ? (
                                 props.roles.map((role, idx) => (
                                     <option
                                         data-testid="role"
@@ -178,7 +176,7 @@ export default function MainContent(props) {
                                     </option>
                                 ))
                             ) : (
-                                <option value={props.roles[0]}>{props.roles[0]}</option>
+                                undefined
                             )}
 
                         </select>
@@ -188,7 +186,7 @@ export default function MainContent(props) {
                             onChange={(event) => props.setCountry(event.target.value)}
                         >
                             <option value="">Filter by country</option>
-                            {props.countries.length > 1 ? (
+                            {props.countries?.length > 1 ? (
                                 props.countries.map((country, idx) => (
                                     <option
                                         data-testid="country"
@@ -199,7 +197,7 @@ export default function MainContent(props) {
                                     </option>
                                 ))
                             ) : (
-                                <option value={props.countries[0]}>{props.countries[0]}</option>
+                                undefined
                             )}
 
                         </select>
@@ -215,7 +213,7 @@ export default function MainContent(props) {
                             onChange={(event) => props.setLevel(event.target.value)}
                         >
                             <option value={""}>Level</option>
-                            {props.levels.map((level, idx) => (
+                            {props.levels?.map((level, idx) => (
                                 <option
                                     data-testid="level"
                                     key={idx}

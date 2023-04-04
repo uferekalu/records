@@ -44,47 +44,17 @@ export default function App(props) {
 
   return (
     <>
-      {isMobile && (
-        <div style={{
-          display: "flex",
-          flexDirection: "column",
-          width: '100%',
-          overflowX: "hidden"
-        }}>
-          <MobileRecords
-            employeesData={props.employeesData}
-            isEmployeesDetails={isEmployeesDetails}
-            setIsEmployeeDetails={setIsEmployeeDetails}
-            isModifyEmployees={isModifyEmployees}
-            setIsModifyEmployees={setIsModifyEmployees}
-            isEmployees={isEmployees}
-            setIsEmployees={setIsEmployees}
-            isEditEmployees={isEditEmployees}
-            setIsEditEmployees={setIsEditEmployees}
-            filterMethod={filterMethod}
-            searchTerm={searchTerm}
-            moderatedJoinedDates={moderatedJoinedDates}
-            joinedDate={joinedDate}
-            setJoinedDate={setJoinedDate}
-            roles={roles}
-            setRoles={setRoles}
-            role={role}
-            setRole={setRole}
-            countries={countries}
-            setCountries={setCountries}
-            country={country}
-            setCountry={setCountry}
-            levels={levels}
-            setLevels={setLevels}
-            level={level}
-            setLevel={setLevel}
-          />
-        </div>
-      )}
-      {isTabAndDesktop && (
-        <div data-testid="container" className="container">
-          <div className="container__content">
-            <Sidebar
+      <div data-testid="main-container">
+        {isMobile && (
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              width: '100%',
+              overflowX: "hidden"
+            }}>
+            <MobileRecords
+              employeesData={props.employeesData}
               isEmployeesDetails={isEmployeesDetails}
               setIsEmployeeDetails={setIsEmployeeDetails}
               isModifyEmployees={isModifyEmployees}
@@ -95,17 +65,6 @@ export default function App(props) {
               setIsEditEmployees={setIsEditEmployees}
               filterMethod={filterMethod}
               searchTerm={searchTerm}
-            />
-            <Content
-              employeesData={props.employeesData}
-              isEmployeesDetails={isEmployeesDetails}
-              setIsEmployeeDetails={setIsEmployeeDetails}
-              isModifyEmployees={isModifyEmployees}
-              setIsModifyEmployees={setIsModifyEmployees}
-              isEmployees={isEmployees}
-              setIsEmployees={setIsEmployees}
-              isEditEmployees={isEditEmployees}
-              setIsEditEmployees={setIsEditEmployees}
               moderatedJoinedDates={moderatedJoinedDates}
               joinedDate={joinedDate}
               setJoinedDate={setJoinedDate}
@@ -121,12 +80,56 @@ export default function App(props) {
               setLevels={setLevels}
               level={level}
               setLevel={setLevel}
-              filterMethod={filterMethod}
-              searchTerm={searchTerm}
             />
           </div>
-        </div>
-      )}
+        )}
+        {isTabAndDesktop && (
+          <div data-testid="container" className="container">
+            <div className="container__content">
+              <Sidebar
+                isEmployeesDetails={isEmployeesDetails}
+                setIsEmployeeDetails={setIsEmployeeDetails}
+                isModifyEmployees={isModifyEmployees}
+                setIsModifyEmployees={setIsModifyEmployees}
+                isEmployees={isEmployees}
+                setIsEmployees={setIsEmployees}
+                isEditEmployees={isEditEmployees}
+                setIsEditEmployees={setIsEditEmployees}
+                filterMethod={filterMethod}
+                searchTerm={searchTerm}
+              />
+              <Content
+                employeesData={props.employeesData}
+                isEmployeesDetails={isEmployeesDetails}
+                setIsEmployeeDetails={setIsEmployeeDetails}
+                isModifyEmployees={isModifyEmployees}
+                setIsModifyEmployees={setIsModifyEmployees}
+                isEmployees={isEmployees}
+                setIsEmployees={setIsEmployees}
+                isEditEmployees={isEditEmployees}
+                setIsEditEmployees={setIsEditEmployees}
+                moderatedJoinedDates={moderatedJoinedDates}
+                joinedDate={joinedDate}
+                setJoinedDate={setJoinedDate}
+                roles={roles}
+                setRoles={setRoles}
+                role={role}
+                setRole={setRole}
+                countries={countries}
+                setCountries={setCountries}
+                country={country}
+                setCountry={setCountry}
+                levels={levels}
+                setLevels={setLevels}
+                level={level}
+                setLevel={setLevel}
+                filterMethod={filterMethod}
+                searchTerm={searchTerm}
+              />
+            </div>
+          </div>
+        )}
+      </div>
     </>
   )
 }

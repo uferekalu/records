@@ -5,7 +5,9 @@ import './Content.css'
 export default function Content(props) {
     return (
         <>
-            <div className="content">
+            <div
+                data-testid="content"
+                className="content">
                 <Header />
                 <MainContent
                     employeesData={props.employeesData}

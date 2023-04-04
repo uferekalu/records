@@ -51,7 +51,7 @@ export default function MobileRecordsContents(props) {
                 padding: '20px',
                 marginTop: "-10px"
             }}>
-            {props.isEmployeesDetails && (
+            {(props.isEmployeesDetails || props.isModifyEmployees) && (
                 <div style={{
                     display: 'flex',
                     flexDirection: 'column',
@@ -100,30 +100,69 @@ export default function MobileRecordsContents(props) {
                     )}
                 </div>
             )}
-            {props.isEmployeesDetails && (
+            {(props.isEmployeesDetails || props.isModifyEmployees) && (
                 <>
                     <div style={{
                         display: 'flex',
                         flexDirection: 'column',
                         width: '30%'
                     }}>
-                        <Form.Label style={{
-                            fontSize: "12px",
-                            fontWeight: "500",
-                            marginTop: "5px",
-                            color: "black",
-                            marginBottom: "20px",
-                            // borderBottom: '1px solid #E7E7E7'
-                        }}>
-                            Id
-                        </Form.Label>
+                        {index ? (
+                            <Form.Label
+                                onClick={() => setIndex((prevState) => {
+                                    prevState = ""
+                                    return prevState
+                                })}
+                                style={{
+                                    fontSize: "12px",
+                                    fontWeight: "500",
+                                    marginTop: "5px",
+                                    color: "black",
+                                    marginBottom: "20px",
+    
+                                }}>
+                                Id
+                            </Form.Label>
+
+                        ) : index === 0 ? (
+                            <Form.Label
+                                onClick={() => setIndex((prevState) => {
+                                    prevState = ""
+                                    return prevState
+                                })}
+                                style={{
+                                    fontSize: "12px",
+                                    fontWeight: "500",
+                                    marginTop: "5px",
+                                    color: "black",
+                                    marginBottom: "20px",
+    
+                                }}>
+                                Id
+                            </Form.Label>
+                        ) : (
+                            <Form.Label
+                                onClick={() => setIndex((prevState) => {
+                                    prevState = props.idx
+                                    return prevState
+                                })}
+                                style={{
+                                    fontSize: "12px",
+                                    fontWeight: "500",
+                                    marginTop: "5px",
+                                    color: "black",
+                                    marginBottom: "20px",
+    
+                                }}>
+                                Id
+                            </Form.Label>
+                        )}
                         <Form.Label style={index === props.idx ? {
                             display: "block",
                             fontSize: "12px",
                             fontWeight: "500",
                             color: "black",
                             marginBottom: "20px",
-                            // borderBottom: '1px solid #E7E7E7'
                         } : {
                             display: 'none'
                         }}>
@@ -135,7 +174,6 @@ export default function MobileRecordsContents(props) {
                             fontWeight: "500",
                             color: "black",
                             marginBottom: "20px",
-                            // borderBottom: '1px solid #E7E7E7'
                         } : {
                             display: 'none'
                         }}>
@@ -147,7 +185,6 @@ export default function MobileRecordsContents(props) {
                             fontWeight: "500",
                             color: "black",
                             marginBottom: "10px",
-                            // borderBottom: '1px solid #E7E7E7'
                         } : {
                             display: 'none'
                         }}>
@@ -160,7 +197,6 @@ export default function MobileRecordsContents(props) {
                             color: "black",
                             marginBottom: "20px",
                             marginTop: "20px",
-                            // borderBottom: '1px solid #E7E7E7'
                         } : {
                             display: "none"
                         }}>
@@ -172,7 +208,6 @@ export default function MobileRecordsContents(props) {
                             fontWeight: "500",
                             color: "black",
                             marginBottom: "20px",
-                            // borderBottom: '1px solid #E7E7E7'
                         } : {
                             display: 'none'
                         }}>
@@ -184,7 +219,6 @@ export default function MobileRecordsContents(props) {
                             fontWeight: "500",
                             color: "black",
                             marginBottom: "20px",
-                            // borderBottom: '1px solid #E7E7E7'
                         } : {
                             display: "none"
                         }}>
@@ -196,7 +230,6 @@ export default function MobileRecordsContents(props) {
                             fontWeight: "500",
                             color: "black",
                             marginBottom: "20px",
-                            // borderBottom: '1px solid #E7E7E7'
                         } : {
                             display: "none"
                         }}>
@@ -208,7 +241,6 @@ export default function MobileRecordsContents(props) {
                             fontWeight: "500",
                             color: "black",
                             marginBottom: "20px",
-                            // borderBottom: '1px solid #E7E7E7'
                         } : {
                             display: "none"
                         }}>
@@ -220,7 +252,6 @@ export default function MobileRecordsContents(props) {
                             fontWeight: "500",
                             color: "black",
                             marginBottom: "20px",
-                            // borderBottom: '1px solid #E7E7E7'
                         } : {
                             display: "none"
                         }}>
@@ -232,21 +263,56 @@ export default function MobileRecordsContents(props) {
                         flexDirection: 'column',
                         width: '55%'
                     }}>
-                        <Form.Label style={{
-                            fontSize: "12px",
-                            fontWeight: "500",
-                            color: "black",
-                            marginTop: '3px'
-                        }}>
-                            {props.data.id}
-                        </Form.Label>
+                        {index ? (
+                            <Form.Label
+                                onClick={() => setIndex((prevState) => {
+                                    prevState = ""
+                                    return prevState
+                                })}
+                                style={{
+                                    fontSize: "12px",
+                                    fontWeight: "500",
+                                    color: "black",
+                                    marginTop: '3px'
+                                }}>
+                                {props.data.id}
+                            </Form.Label>
+
+                        ) : index === 0 ? (
+                            <Form.Label
+                                onClick={() => setIndex((prevState) => {
+                                    prevState = ""
+                                    return prevState
+                                })}
+                                style={{
+                                    fontSize: "12px",
+                                    fontWeight: "500",
+                                    color: "black",
+                                    marginTop: '3px'
+                                }}>
+                                {props.data.id}
+                            </Form.Label>
+                        ) : (
+                            <Form.Label
+                                onClick={() => setIndex((prevState) => {
+                                    prevState = props.idx
+                                    return prevState
+                                })}
+                                style={{
+                                    fontSize: "12px",
+                                    fontWeight: "500",
+                                    color: "black",
+                                    marginTop: '3px'
+                                }}>
+                                {props.data.id}
+                            </Form.Label>
+                        )}
                         <Form.Label style={index === props.idx ? {
                             display: "block",
                             fontSize: "12px",
                             fontWeight: "500",
                             color: "black",
                             marginTop: '23px'
-                            // borderBottom: '1px solid #E7E7E7'
                         } : {
                             display: "none"
                         }}>
@@ -258,7 +324,6 @@ export default function MobileRecordsContents(props) {
                             fontWeight: "500",
                             color: "black",
                             marginTop: '24px'
-                            // borderBottom: '1px solid #E7E7E7'
                         } : {
                             display: "none"
                         }}>
@@ -270,7 +335,6 @@ export default function MobileRecordsContents(props) {
                             fontWeight: "500",
                             color: "black",
                             marginTop: '20px'
-                            // borderBottom: '1px solid #E7E7E7'
                         } : {
                             display: "none"
                         }}>
@@ -282,7 +346,6 @@ export default function MobileRecordsContents(props) {
                             fontWeight: "500",
                             color: "black",
                             marginTop: '27px'
-                            // borderBottom: '1px solid #E7E7E7'
                         } : {
                             display: "none"
                         }}>
@@ -294,7 +357,6 @@ export default function MobileRecordsContents(props) {
                             fontWeight: "500",
                             color: "black",
                             marginTop: '20px'
-                            // borderBottom: '1px solid #E7E7E7'
                         } : {
                             display: "none"
                         }}>
@@ -306,7 +368,6 @@ export default function MobileRecordsContents(props) {
                             fontWeight: "500",
                             color: "black",
                             marginTop: '20px'
-                            // borderBottom: '1px solid #E7E7E7'
                         } : {
                             display: "none"
                         }}>
@@ -318,7 +379,6 @@ export default function MobileRecordsContents(props) {
                             fontWeight: "500",
                             color: "black",
                             marginTop: '20px'
-                            // borderBottom: '1px solid #E7E7E7'
                         } : {
                             display: "none"
                         }}>
@@ -330,7 +390,6 @@ export default function MobileRecordsContents(props) {
                             fontWeight: "500",
                             color: "black",
                             marginTop: '20px'
-                            // borderBottom: '1px solid #E7E7E7'
                         } : {
                             display: "none"
                         }}>
