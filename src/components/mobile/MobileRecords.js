@@ -2,6 +2,8 @@ import { useState, useRef, useEffect } from "react";
 import { Button, Form } from "react-bootstrap";
 import DetailModal from "../modal/detailModal";
 import EditModal from "../modal/editModal";
+import FilteredComp from "./filteredComp/FilteredComp";
+import MobilePagination from "./mobilePagination/mobilePagination";
 import MobileRecordsContents from "./mobileRecordsContents";
 
 const initialInfoState = {
@@ -34,6 +36,18 @@ export default function MobileRecords(props) {
     const [email, setEmail] = useState("")
     const [address, setAddress] = useState("")
     const [department, setDepartment] = useState("")
+
+    const [countries, setCountries] = useState([])
+    const [roles, setRoles] = useState([])
+    const [joinedDates, setJoinedDates] = useState([])
+    const [byJoinedDate, setByJoinedDate] = useState("")
+    const [byRole, setByRole] = useState("")
+    const [byCountry, setByCountry] = useState("")
+    const [levels, setLevels] = useState([])
+    const [level, setLevel] = useState("")
+
+    const [multiplesTen, setMultiplesTen] = useState([])
+    const [multipleTen, setMultipleTen] = useState("")
 
     const handleIsEmployees = () => {
         props.setIsEmployees(true)
@@ -135,7 +149,7 @@ export default function MobileRecords(props) {
         <>
             <div>
                 <div
-                    ref={ref}
+                    // ref={ref}
                     style={{
                         display: 'flex',
                         justifyContent: "space-between",
@@ -220,13 +234,15 @@ export default function MobileRecords(props) {
                             src={process.env.PUBLIC_URL + "/assets/images/close.png"} alt="logo" />
                     </div>
                     {isSearch && (
-                        <input style={{
-                            height: "20px",
-                            padding: '5px 8px',
-                            border: "1px solid #A6A6A6",
-                            borderRadius: '5px',
-                            width: "70%"
-                        }} type="text" placeholder="search" />
+                        <input
+                            onChange={props.filterMethod}
+                            style={{
+                                height: "20px",
+                                padding: '5px 8px',
+                                border: "1px solid #A6A6A6",
+                                borderRadius: '5px',
+                                width: "70%"
+                            }} type="text" placeholder="search" />
                     )}
                     <img
                         style={isSearch ? {
@@ -251,7 +267,7 @@ export default function MobileRecords(props) {
                         border: '1px solid #E7E7E7',
                         width: "18rem",
                         padding: '5px 10px',
-                        zIndex: 9,
+                        zIndex: 200,
                         background: "linear-gradient(90deg, #00902F 0%, #7CC427 99.69%)",
                         height: "70vh"
                     } : {
@@ -366,7 +382,22 @@ export default function MobileRecords(props) {
                     marginTop: '6.8px'
                 }} />
             </div>
-            <div style={{
+            <FilteredComp
+                employeesData={props.employeesData}
+                countries={countries}
+                setCountries={setCountries}
+                roles={roles}
+                setRoles={setRoles}
+                joinedDates={joinedDates}
+                setJoinedDates={setJoinedDates}
+                setByJoinedDate={setByJoinedDate}
+                setByRole={setByRole}
+                setByCountry={setByCountry}
+                levels={levels}
+                setLevels={setLevels}
+                setLevel={setLevel}
+            />
+            {/* <div style={{
                 display: "flex",
                 gap: '10px',
                 padding: '15px',
@@ -483,9 +514,9 @@ export default function MobileRecords(props) {
                         ))}
                     </select>
                 </div>
-            </div>
+            </div> */}
             {props.searchTerm?.length > 2 ? (
-                props.employeesData.slice(0, 10)
+                props.employeesData.slice(parseInt(multipleTen - 10), parseInt(multipleTen))
                     .map((data, idx) =>
                         data.id.toString().includes(props.searchTerm) ? (
                             <div key={idx}>
@@ -781,9 +812,9 @@ export default function MobileRecords(props) {
                             <></>
                         )
                     )
-            ) : props.level ? (
-                props.employeesData.filter((data) => data.level === props.level)
-                    .slice(0, 10)
+            ) : level ? (
+                props.employeesData.filter((data) => data.level === level)
+                    .slice(parseInt(multipleTen - 10), parseInt(multipleTen))
                     .map((data, idx) => (
                         <div key={idx}>
                             <MobileRecordsContents
@@ -842,9 +873,9 @@ export default function MobileRecords(props) {
                                 setDepartment={setDepartment}
                             />
                         </div>
-                    ))) : props.country ? (
-                        props.employeesData.filter((data) => data.country === props.country)
-                            .slice(0, 10)
+                    ))) : byCountry ? (
+                        props.employeesData.filter((data) => data.country === byCountry)
+                            .slice(parseInt(multipleTen - 10), parseInt(multipleTen))
                             .map((data, idx) => (
                                 <div key={idx}>
                                     <MobileRecordsContents
@@ -903,9 +934,9 @@ export default function MobileRecords(props) {
                                         setDepartment={setDepartment}
                                     />
                                 </div>
-                            ))) : props.role ? (
-                                props.employeesData.filter((data) => data.role === props.role)
-                                    .slice(0, 10)
+                            ))) : byRole ? (
+                                props.employeesData.filter((data) => data.role === byRole)
+                                    .slice(parseInt(multipleTen - 10), parseInt(multipleTen))
                                     .map((data, idx) => (
                                         <div key={idx}>
                                             <MobileRecordsContents
@@ -964,9 +995,9 @@ export default function MobileRecords(props) {
                                                 setDepartment={setDepartment}
                                             />
                                         </div>
-                                    ))) : props.joinedDate ? (
-                                        props.employeesData.filter((data) => data.dateJoined === props.joinedDate)
-                                            .slice(0, 10)
+                                    ))) : byJoinedDate ? (
+                                        props.employeesData.filter((data) => data.dateJoined === byJoinedDate)
+                                            .slice(parseInt(multipleTen - 10), parseInt(multipleTen))
                                             .map((data, idx) => (
                                                 <div key={idx}>
                                                     <MobileRecordsContents
@@ -1026,7 +1057,7 @@ export default function MobileRecords(props) {
                                                     />
                                                 </div>
                                             ))) :
-                props.employeesData.slice(0, 10)
+                props.employeesData.slice(parseInt(multipleTen - 10), parseInt(multipleTen))
                     .map((data, idx) => (
                         <>
                             <div key={idx}>
@@ -1088,6 +1119,13 @@ export default function MobileRecords(props) {
                             </div>
                         </>
                     ))}
+            <MobilePagination
+                employeesData={props.employeesData}
+                multiplesTen={multiplesTen}
+                setMultiplesTen={setMultiplesTen}
+                setMultipleTen={setMultipleTen}
+                multipleTen={multipleTen}
+            />
             <DetailModal
                 details={details}
                 setDetails={setDetails}
